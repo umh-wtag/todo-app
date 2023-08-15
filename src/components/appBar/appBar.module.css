@@ -1,0 +1,19 @@
+.img {
+  height: 34px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7a8dfd;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 100px;
+  padding-left: 100px;
+  border: 1px solid #dde2ff;
+  background-color: white;
+}

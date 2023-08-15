@@ -1,7 +1,25 @@
 export const initialState = {
-  todosItems: [
-    { text: "Eat", completed: true },
-    { text: "Sleep", completed: false },
+  todoItems: [
+    {
+      text: "Complete initial setup of the todo app",
+      completed: true,
+      createdAt: new Date(),
+    },
+    {
+      text: "Complete initial setup of the todo app",
+      completed: true,
+      createdAt: new Date(),
+    },
+    {
+      text: "Complete initial setup of the todo app",
+      completed: true,
+      createdAt: new Date(),
+    },
+    {
+      text: "Complete initial setup of the todo app",
+      completed: true,
+      createdAt: new Date(),
+    },
   ],
   visibilityFiler: "SHOW_ALL",
 }

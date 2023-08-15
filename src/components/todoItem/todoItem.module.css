@@ -1,0 +1,23 @@
+.card{
+    width:325px;
+    height: 163px;
+    background-color: white;
+    border: 1px solid #DDE2FF;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.time{
+    color: #BBBDD0;
+    font-size: 14px;
+}
+
+.actions{
+    display: flex;
+    gap: 1rem;
+}
+
+.img{
+    height: 20px;
+}
