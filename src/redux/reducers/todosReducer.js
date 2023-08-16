@@ -7,7 +7,6 @@ export const initialState = {
     {
       text: "Complete initial setup of the todo app",
       completed: true,
-      createdAt: new Date(),
     },
   ],
   visibilityFiler: "SHOW_ALL",
@@ -16,14 +15,13 @@ export const initialState = {
 export default function todosReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
-      const { text, createdAt } = action.payload
+      const { text } = action.payload
       return {
         ...state,
         todoItems: [
           ...state.todoItems,
           {
             text: text,
-            createdAt: createdAt,
             completed: false
           }
         ]

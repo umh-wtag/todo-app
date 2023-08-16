@@ -7,7 +7,6 @@ export const AddNewTodo = (todo) => {
     type: ADD_TODO,
     payload: {
       text: todo,
-      createdAt: Date.now(),
     }
   }
 }
