@@ -2,11 +2,11 @@ import React from "react"
 import { useSelector } from "react-redux"
 import TodoItem from "../todoItem"
 import styles from "./todoList.module.css"
-import Form from "../form"
+import Form from '../form'
 
 const selectTodos = (state) => state.todos.todoItems
 
-const TodoList = ({ isAdding }) => {
+const TodoList = ({ isAdding, setIasAdding }) => {
   const todos = useSelector(selectTodos)
 
   const renderedListItems = todos
@@ -18,7 +18,7 @@ const TodoList = ({ isAdding }) => {
 
   return (
     <div className={styles.todoList}>
-      {isAdding && <Form />}
+      {isAdding && <Form setIasAdding={setIasAdding} />}
       {renderedListItems}
     </div>
   )

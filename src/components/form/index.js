@@ -4,7 +4,7 @@ import trash from "../../utils/trash.png"
 import { useDispatch } from "react-redux"
 import { AddNewTodo } from "../../redux/actions"
 
-function Form() {
+function Form({ setIasAdding }) {
   const dispatch = useDispatch()
   const [task, setTask] = useState("")
 
@@ -12,6 +12,7 @@ function Form() {
     e.preventDefault()
     dispatch(AddNewTodo(task))
     setTask("")
+    setIasAdding(false)
   }
   return (
     <main className={styles.card}>

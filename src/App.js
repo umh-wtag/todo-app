@@ -3,6 +3,7 @@ import AppBar from "./components/appBar"
 import TodoList from "./components/todoList"
 import { useState } from "react"
 
+
 function App() {
   const [isAdding, setIasAdding] = useState(false)
   return (
@@ -24,8 +25,8 @@ function App() {
           </div>
         </div>
 
-        <div className={styles.todoList}>
-          <TodoList isAdding={isAdding}/>
+        <div>
+          <TodoList isAdding={isAdding} setIasAdding={setIasAdding} />
         </div>
       </section>
     </main>
