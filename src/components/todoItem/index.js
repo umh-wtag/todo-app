@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "./todoItem.module.css"
-import TimeAgo from "timeago-react"
 import pencil from "../../utils/pencil.png"
 import trash from "../../utils/trash.png"
 import check from "../../utils/checkmark.png"
