@@ -10,6 +10,8 @@ const TodoList = ({ isAdding }) => {
   const todos = useSelector(selectTodos)
 
   const renderedListItems = todos
+    .slice(0)
+    .reverse()
     .map((todo) => {
       return <TodoItem key={todo.id} todo={todo} />
     })
