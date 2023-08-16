@@ -1,20 +1,29 @@
-.card{
-    width:325px;
-    height: 163px;
-    background-color: white;
-    border: 1px solid #DDE2FF;
+.card {
+  width: 20rem;
+  height: 10rem;
+  background-color: white;
+  border: 1px solid #dde2ff;
 }
-.container{
-    width: 90%;
-    margin: 0 auto;
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
-.actions{
-    display: flex;
-    gap: 1rem;
+.actions {
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
-.img{
-    height: 20px;
-    cursor: pointer;
-    
+.img {
+  height: 20px;
+  cursor: pointer;
+}
+
+.textarea {
+  border: 0.15rem solid #d1d8ff;
+  border-radius: 0.75rem;
+  margin-top: 0.5rem;
+  width: 95%;
+  height: 7rem;
 }
