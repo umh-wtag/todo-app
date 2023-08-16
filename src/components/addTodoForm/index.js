@@ -4,7 +4,7 @@ import trash from "../../utils/trash.png"
 import { useDispatch } from "react-redux"
 import { AddNewTodo, IsAdding } from "../../redux/actions"
 
-function Form() {
+function AddTodoForm() {
   const dispatch = useDispatch()
   const [task, setTask] = useState("")
 
@@ -33,4 +33,4 @@ function Form() {
   )
 }
 
-export default Form
+export default AddTodoForm

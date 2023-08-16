@@ -2,7 +2,7 @@ import React from "react"
 import vector from "../../utils/Vector.png"
 import styles from "./appBar.module.css"
 import search from "../../utils/search.png"
-function AppBar() {
+function NavBar() {
   return (
     <main className={styles.container}>
       <div className={styles.logo}>
@@ -16,4 +16,4 @@ function AppBar() {
   )
 }
 
-export default AppBar
+export default NavBar

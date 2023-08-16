@@ -1,12 +1,12 @@
 import styles from "./App.module.css"
-import AppBar from "./components/appBar"
+import NavBar from "./components/navBar"
 import TodoList from "./components/todoList"
 import Header from "./components/header/Header"
 
 function App() {
   return (
     <main>
-      <AppBar />
+      <NavBar />
       <section className={styles.container}>
         <Header />
         <TodoList />

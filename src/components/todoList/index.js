@@ -2,7 +2,7 @@ import React from "react"
 import { useSelector } from "react-redux"
 import TodoItem from "../todoItem"
 import styles from "./todoList.module.css"
-import Form from "../form"
+import AddTodoForm from "../addTodoForm"
 
 const selectTodos = (state) => state.todos.todoItems
 
@@ -20,7 +20,7 @@ const TodoList = () => {
 
   return (
     <div className={styles.todoList}>
-      {toggleIsAdding && <Form />}
+      {toggleIsAdding && <AddTodoForm />}
       {renderedListItems}
     </div>
   )
