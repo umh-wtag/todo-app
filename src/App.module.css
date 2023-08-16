@@ -1,7 +1,3 @@
-body {
-  background-color: #f8f9ff;
-}
-
 .container {
   width: 80%;
   margin: 0 auto;
@@ -9,14 +5,3 @@ body {
   flex-direction: column;
   gap: 5rem;
 }
-.buttons{
-    display: flex;
-    justify-content: space-between;
-}
-
-.filterButtons{
-    display: flex;
-    gap: 1rem;
-}
-
-

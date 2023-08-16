@@ -1,6 +1,4 @@
-import {
-  ADD_TODO,
-} from "../actions/actionTypes"
+import { ADD_TODO, IS_ADDING } from "../actions/actionTypes"
 
 export const initialState = {
   todoItems: [
@@ -10,6 +8,7 @@ export const initialState = {
     },
   ],
   visibilityFiler: "SHOW_ALL",
+  isAdding: false,
 }
 
 export default function todosReducer(state = initialState, action) {
@@ -22,9 +21,15 @@ export default function todosReducer(state = initialState, action) {
           ...state.todoItems,
           {
             text: text,
-            completed: false
-          }
-        ]
+            completed: false,
+          },
+        ],
+      }
+    case IS_ADDING:
+      const { val } = action.payload
+      return {
+        ...state,
+        isAdding: val,
       }
     default:
       return state

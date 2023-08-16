@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import styles from "./form.module.css"
 import trash from "../../utils/trash.png"
 import { useDispatch } from "react-redux"
-import { AddNewTodo } from "../../redux/actions"
+import { AddNewTodo, IsAdding } from "../../redux/actions"
 
-function Form({ setIasAdding }) {
+function Form() {
   const dispatch = useDispatch()
   const [task, setTask] = useState("")
 
@@ -12,7 +12,7 @@ function Form({ setIasAdding }) {
     e.preventDefault()
     dispatch(AddNewTodo(task))
     setTask("")
-    setIasAdding(false)
+    dispatch(IsAdding(false))
   }
   return (
     <main className={styles.card}>
