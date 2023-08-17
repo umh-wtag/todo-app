@@ -3,7 +3,7 @@ import styles from "./Header.module.css"
 import { useDispatch } from "react-redux"
 import { IsAdding } from "../../redux/actions"
 import { useSelector } from "react-redux"
-import FilterButtons from "./filterButtons"
+import FilterButtons from "../filterButtons"
 
 function Header() {
   const dispatch = useDispatch()
@@ -17,9 +17,9 @@ function Header() {
         <h1>Add Task</h1>
         <div className={styles.buttons}>
           <button onClick={() => dispatch(IsAdding(!toggleIsAdding))}>
-            Add Task
+            Create
           </button>
-            <FilterButtons/>
+          <FilterButtons />
         </div>
       </div>
     </main>

@@ -1,23 +1,23 @@
-.card{
-    width:325px;
-    height: 163px;
-    background-color: white;
-    border: 1px solid #DDE2FF;
+.card {
+  width: 325px;
+  height: 163px;
+  background-color: white;
+  border: 1px solid #dde2ff;
 }
-.container{
-    width: 90%;
-    margin: 0 auto;
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
-.time{
-    color: #BBBDD0;
-    font-size: 14px;
-}
-
-.actions{
-    display: flex;
-    gap: 1rem;
+.time {
+  color: #bbbdd0;
+  font-size: 14px;
 }
 
-.img{
-    height: 20px;
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.img {
+  height: 20px;
 }
