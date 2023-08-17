@@ -3,14 +3,14 @@ import { useSelector } from "react-redux"
 import TodoItem from "../todoItem"
 import styles from "./todoList.module.css"
 import AddTodoForm from "../addTodoForm"
-
+import add from '../../utils/undraw_add_files_re_v09g 1.png'
 const selectTodos = (state) => state.todos.todoItems
 
 const TodoList = () => {
   const todos = useSelector(selectTodos)
   const selectIsAdding = (state) => state.todos.isAdding
   const toggleIsAdding = useSelector(selectIsAdding)
-
+  
   const renderedListItems = todos
     .slice(0)
     .reverse()
@@ -19,9 +19,17 @@ const TodoList = () => {
     })
 
   return (
-    <div className={styles.todoList}>
-      {toggleIsAdding && <AddTodoForm />}
-      {renderedListItems}
+    <div>
+      {todos.length < 1 && (
+        <div className={styles.add}>
+          <img src={add} alt='Add First task' className={ styles.img} />
+          <h1>You didn't add any task. Please, add one.</h1>
+        </div>
+      )}
+      <div className={styles.todoList}>
+        {toggleIsAdding && <AddTodoForm />}
+        {renderedListItems}
+      </div>
     </div>
   )
 }
