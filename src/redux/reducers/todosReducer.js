@@ -1,12 +1,7 @@
 import { ADD_TODO, IS_ADDING } from "../actions/actionTypes"
 
 export const initialState = {
-  todoItems: [
-    {
-      text: "Complete initial setup of the todo app",
-      completed: true,
-    },
-  ],
+  todoItems: [],
   visibilityFiler: "SHOW_ALL",
   isAdding: false,
 }
