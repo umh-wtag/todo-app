@@ -21,7 +21,6 @@ function AddTodoForm() {
     }
   }
   return (
-    <div>
       <main className="form">
         <form className="form__container" onSubmit={handleSubmit}>
           <textarea
@@ -34,12 +33,15 @@ function AddTodoForm() {
           />
           <div className="fomr__container__actions">
             <button>Add Task</button>
-            <img src={trash} alt="Delete" className="form__container__actions__img" />
+            <img
+              src={trash}
+              alt="Delete"
+              className="form__container__actions__img"
+            />
+            {err && <p> You must add a task </p>}
           </div>
         </form>
       </main>
-      {err && <p> You must add a task </p>}
-    </div>
   )
 }
 
