@@ -10,9 +10,9 @@ function AddTodoForm() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    dispatch(AddNewTodo(task))
-    setTask("")
-    dispatch(IsAdding(false))
+      dispatch(AddNewTodo(task))
+      setTask("")
+      dispatch(IsAdding(false))
   }
   return (
     <main className={styles.card}>
@@ -23,6 +23,7 @@ function AddTodoForm() {
           placeholder="Add Todo"
           value={task}
           onChange={(e) => setTask(e.target.value)}
+          required
         />
         <div className={styles.actions}>
           <button>Add Task</button>
