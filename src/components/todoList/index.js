@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import TodoItem from "components/todoItem"
 import "components/todoList/todoList.css"
 import AddTodoForm from "components/addTodoForm"
-import add from "assets/undraw_add_files_re_v09g 1.png"
+import { IMAGE_PATHS } from "utils/constants"
 const selectTodos = (state) => state.todos.todoItems
 
 const TodoList = () => {
@@ -21,7 +21,7 @@ const TodoList = () => {
     <div>
       {todos.length < 1 && toggleIsAdding === false && (
         <div className="add">
-          <img src={add} alt="Add First task" className="add__img" />
+          <img src={IMAGE_PATHS.ADD} alt="Add First task" className="add__img" />
           <h1>You didn't add any task. Please, add one.</h1>
         </div>
       )}
