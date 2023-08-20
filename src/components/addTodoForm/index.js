@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styles from "components/addTodoForm/form.module.css"
-import trash from "utils/trash.png"
+import trash from "assets/trash.png"
 import { useDispatch } from "react-redux"
 import { AddNewTodo, IsAdding } from "redux/actions"
 

@@ -1,8 +1,8 @@
 import React from "react"
 import styles from "components/todoItem/todoItem.module.css"
-import pencil from "utils/pencil.png"
-import trash from "utils/trash.png"
-import check from "utils/checkmark.png"
+import pencil from "assets/pencil.png"
+import trash from "assets/trash.png"
+import check from "assets/checkmark.png"
 
 function TodoItem({ todo }) {
   return (
