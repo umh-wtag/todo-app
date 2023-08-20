@@ -1,4 +1,4 @@
-import { ADD_TODO, IS_ADDING } from "../actions/actionTypes"
+import { ADD_TODO, IS_ADDING } from "redux/actions/actionTypes"
 
 export const initialState = {
   todoItems: [],
