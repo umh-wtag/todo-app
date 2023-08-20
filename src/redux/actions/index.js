@@ -1,6 +1,6 @@
 import { ADD_TODO, IS_ADDING } from "redux/actions/actionTypes"
 
-export const AddNewTodo = (todo) => {
+export const addNewTodo = (todo) => {
   return {
     type: ADD_TODO,
     payload: {
@@ -9,7 +9,7 @@ export const AddNewTodo = (todo) => {
   }
 }
 
-export const IsAdding = (value) => {
+export const isAdding = (value) => {
   return {
     type: IS_ADDING,
     payload: {

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styles from "components/addTodoForm/form.module.css"
 import trash from "assets/trash.png"
 import { useDispatch } from "react-redux"
-import { AddNewTodo, IsAdding } from "redux/actions"
+import { addNewTodo, isAdding } from "redux/actions"
 import { customSanitize } from "utils/sanitizeInput"
 
 function AddTodoForm() {
@@ -12,9 +12,9 @@ function AddTodoForm() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log(customSanitize(task))
-    dispatch(AddNewTodo(customSanitize(task)))
+    dispatch(addNewTodo(customSanitize(task)))
     setTask("")
-    dispatch(IsAdding(false))
+    dispatch(isAdding(false))
   }
   return (
     <main className={styles.card}>
