@@ -4,6 +4,5 @@ export function customSanitize(input) {
     .replace(/>/g, "&gt;")
     .replace(/'/g, "&#39;")
     .replace(/"/g, "&quot;")
-    .replace(/\s/g, "")
   return sanitizedInput
 }
