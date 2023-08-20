@@ -9,6 +9,7 @@ function TodoItem({ todo }) {
     <main className={styles.card}>
       <div className={styles.container}>
         <h1>{todo.text}</h1>
+        <p className={styles.time}> Created At : {todo.createdAt }</p>
         <div className={styles.actions}>
           <img src={check} alt="Done" className={styles.img} />
           <img src={pencil} alt="Edit" className={styles.img} />

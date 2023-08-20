@@ -16,6 +16,15 @@ export default function todosReducer(state = initialState, action) {
           ...state.todoItems,
           {
             text: text,
+            createdAt: new Date()
+              .toLocaleString("en", {
+                day: "numeric",
+                month: "numeric",
+                year: "2-digit",
+              })
+              .split(",")[0]
+              .split("/")
+              .join("."),
             completed: false,
           },
         ],
