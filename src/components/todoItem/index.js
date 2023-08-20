@@ -1,8 +1,6 @@
 import React from "react"
 import "components/todoItem/todoItem.css"
-import pencil from "assets/pencil.png"
-import trash from "assets/trash.png"
-import check from "assets/checkmark.png"
+import  {IMAGE_PATHS}  from "utils/constants"
 import {
   COMPLETE_BUTTON_ALT,
   DELETE_BUTTON_ALT,
@@ -16,17 +14,17 @@ function TodoItem({ todo }) {
       <p className="todo_card__time"> Created At : {todo.createdAt}</p>
       <div className="todo_card__actions">
         <img
-          src={check}
+          src={IMAGE_PATHS.CHECK}
           alt={COMPLETE_BUTTON_ALT}
           className="todo_card__actions__img"
         />
         <img
-          src={pencil}
+          src={IMAGE_PATHS.EDIT}
           alt={EDIT_BUTTON_ALT}
           className="todo_card__actions__img"
         />
         <img
-          src={trash}
+          src={IMAGE_PATHS.DELETE}
           alt={DELETE_BUTTON_ALT}
           className="todo_card__actions__img"
         />
