@@ -1,9 +1,9 @@
 import React from "react"
-import styles from "components/filterButtons/filterButton.module.css"
+import "components/filterButtons/filterButton.css"
 
 function FilterButtons() {
   return (
-    <div className={styles.filterButtons}>
+    <div className="filterButtons">
       <button>All</button>
       <button>Incomplete</button>
       <button>Complete</button>

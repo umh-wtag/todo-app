@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "components/header/header.module.css"
+import  "components/header/header.css"
 import { useDispatch } from "react-redux"
 import { isAdding } from "redux/actions"
 import { useSelector } from "react-redux"
@@ -13,9 +13,9 @@ function Header() {
 
   return (
     <main>
-      <div className={styles.body}>
+      <div className="body">
         <h1>Add Task</h1>
-        <div className={styles.buttons}>
+        <div className="body__buttons">
           <button onClick={() => dispatch(isAdding(!toggleIsAdding))}>
             Create
           </button>

@@ -1,24 +1,24 @@
-.card {
+.todo_card {
   width: 325px;
   height: 163px;
   background-color: white;
   border: 1px solid #dde2ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
 }
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-.time {
+.todo_card__time {
   color: #bbbdd0;
   font-size: 17px;
   font-weight: 700;
 }
 
-.actions {
+.todo_card__actions {
   display: flex;
   gap: 1rem;
 }
 
-.img {
+.todo_card__actions__img {
   height: 20px;
 }

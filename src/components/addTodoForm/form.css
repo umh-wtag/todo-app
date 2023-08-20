@@ -1,15 +1,15 @@
-.card {
+.form {
   width: 20rem;
   height: 10.2rem;
   background-color: white;
   border: 0.05rem solid #dde2ff;
   position: relative;
 }
-.container {
+.form__container {
   width: 90%;
   margin: 0 auto;
 }
-.actions {
+.fomr__container__actions {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -17,12 +17,12 @@
   position: absolute;
 }
 
-.img {
+.form_container__actions__img {
   height: 1.3rem;
   cursor: pointer;
 }
 
-.textarea {
+.form__container__textarea {
   border: 0.15rem solid #d1d8ff;
   border-radius: 0.75rem;
   margin-top: 0.5rem;

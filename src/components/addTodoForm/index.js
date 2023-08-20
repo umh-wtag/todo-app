@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styles from "components/addTodoForm/form.module.css"
+import "components/addTodoForm/form.css"
 import trash from "assets/trash.png"
 import { useDispatch } from "react-redux"
 import { addNewTodo, isAdding } from "redux/actions"
@@ -22,19 +22,19 @@ function AddTodoForm() {
   }
   return (
     <div>
-      <main className={styles.card}>
-        <form className={styles.container} onSubmit={handleSubmit}>
+      <main className="form">
+        <form className="form__container" onSubmit={handleSubmit}>
           <textarea
-            className={styles.textarea}
+            className="form__container__textarea"
             name="body"
             placeholder="Add Todo"
             value={task}
             onChange={(e) => setTask(e.target.value)}
             required
           />
-          <div className={styles.actions}>
+          <div className="fomr__container__actions">
             <button>Add Task</button>
-            <img src={trash} alt="Delete" className={styles.img} />
+            <img src={trash} alt="Delete" className="form__container__actions__img" />
           </div>
         </form>
       </main>
