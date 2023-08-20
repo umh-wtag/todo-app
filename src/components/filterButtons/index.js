@@ -1,12 +1,13 @@
 import React from "react"
-import "components/filterButtons/filterButton.css"
+import "components/filterButtons/filterButton.scss"
+import Button from "components/button"
 
 function FilterButtons() {
   return (
     <div className="filterButtons">
-      <button>All</button>
-      <button>Incomplete</button>
-      <button>Complete</button>
+      <Button text="All"></Button>
+      <Button text="Incomplete"></Button>
+      <Button text="Complete"></Button>
     </div>
   )
 }

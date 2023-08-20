@@ -1,8 +1,10 @@
-body {
+.body{
   background-color: #f8f9ff;
-}
-.body__buttons {
-  display: flex;
+
+  &__buttons{
+    display: flex;
   justify-content: space-between;
+  }
 }
+
 

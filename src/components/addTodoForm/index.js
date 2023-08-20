@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "components/addTodoForm/form.css"
+import "components/addTodoForm/form.scss"
 import trash from "assets/trash.png"
 import { useDispatch } from "react-redux"
 import { addNewTodo, isAdding } from "redux/actions"
@@ -32,7 +32,7 @@ function AddTodoForm() {
           onChange={(e) => setTask(e.target.value)}
           required
         />
-        <div className="fomr__container__actions">
+        <div className="form__container__actions">
           <button>Add Task</button>
           <img
             src={trash}

@@ -1,0 +1,33 @@
+.form {
+  width: 20rem;
+  height: 10.2rem;
+  background-color: #ffffff;
+  border: 0.05rem solid #dde2ff;
+  position: relative;
+
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+
+    &__actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      bottom: 1rem;
+      position: absolute;
+
+      &__img {
+        height: 1.3rem;
+        cursor: pointer;
+      }
+    }
+
+    &__textarea {
+      border: 0.15rem solid #d1d8ff;
+      border-radius: 0.75rem;
+      margin-top: 0.5rem;
+      width: 95%;
+      height: 4rem;
+    }
+  }
+}
