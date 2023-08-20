@@ -3,6 +3,7 @@ import styles from "components/addTodoForm/form.module.css"
 import trash from "assets/trash.png"
 import { useDispatch } from "react-redux"
 import { AddNewTodo, IsAdding } from "redux/actions"
+import { customSanitize } from "utils/sanitizeInput"
 
 function AddTodoForm() {
   const dispatch = useDispatch()
@@ -10,7 +11,8 @@ function AddTodoForm() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    dispatch(AddNewTodo(task))
+    console.log(customSanitize(task))
+    dispatch(AddNewTodo(customSanitize(task)))
     setTask("")
     dispatch(IsAdding(false))
   }
