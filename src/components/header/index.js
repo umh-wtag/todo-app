@@ -1,9 +1,9 @@
 import React from "react"
-import styles from "./Header.module.css"
+import styles from "components/header/Header.module.css"
 import { useDispatch } from "react-redux"
-import { IsAdding } from "../../redux/actions"
+import { IsAdding } from "redux/actions"
 import { useSelector } from "react-redux"
-import FilterButtons from "../filterButtons"
+import FilterButtons from "components/filterButtons"
 
 function Header() {
   const dispatch = useDispatch()

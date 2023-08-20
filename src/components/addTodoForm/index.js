@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import styles from "./form.module.css"
-import trash from "../../utils/trash.png"
+import styles from "components/addTodoForm/form.module.css"
+import trash from "utils/trash.png"
 import { useDispatch } from "react-redux"
-import { AddNewTodo, IsAdding } from "../../redux/actions"
+import { AddNewTodo, IsAdding } from "redux/actions"
 
 function AddTodoForm() {
   const dispatch = useDispatch()
@@ -10,9 +10,9 @@ function AddTodoForm() {
 
   function handleSubmit(e) {
     e.preventDefault()
-      dispatch(AddNewTodo(task))
-      setTask("")
-      dispatch(IsAdding(false))
+    dispatch(AddNewTodo(task))
+    setTask("")
+    dispatch(IsAdding(false))
   }
   return (
     <main className={styles.card}>

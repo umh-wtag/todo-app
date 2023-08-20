@@ -1,9 +1,9 @@
 import React from "react"
 import { useSelector } from "react-redux"
-import TodoItem from "../todoItem"
-import styles from "./todoList.module.css"
-import AddTodoForm from "../addTodoForm"
-import add from '../../utils/undraw_add_files_re_v09g 1.png'
+import TodoItem from "components/todoItem"
+import styles from "components/todoList/todoList.module.css"
+import AddTodoForm from "components/addTodoForm"
+import add from 'utils/undraw_add_files_re_v09g 1.png'
 const selectTodos = (state) => state.todos.todoItems
 
 const TodoList = () => {

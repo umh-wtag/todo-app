@@ -1,7 +1,7 @@
-import styles from "./App.module.css"
-import NavBar from "./components/navBar"
-import TodoList from "./components/todoList"
-import Header from "./components/header"
+import styles from "App.module.css"
+import NavBar from "components/navBar"
+import TodoList from "components/todoList"
+import Header from "components/header"
 
 function App() {
   return (

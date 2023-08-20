@@ -1,7 +1,7 @@
 import React from "react"
-import vector from "../../utils/Vector.png"
-import styles from "./appBar.module.css"
-import search from "../../utils/search.png"
+import vector from "utils/Vector.png"
+import styles from "components/navBar/appBar.module.css"
+import search from "utils/search.png"
 function NavBar() {
   return (
     <main className={styles.container}>
