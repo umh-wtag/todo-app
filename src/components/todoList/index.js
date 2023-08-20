@@ -17,10 +17,9 @@ const TodoList = () => {
     .map((todo) => {
       return <TodoItem key={todo.text} todo={todo} />
     })
-
   return (
     <div>
-      {todos.length < 1 && (
+      {todos.length < 1 && toggleIsAdding === false && (
         <div className={styles.add}>
           <img src={add} alt="Add First task" className={styles.img} />
           <h1>You didn't add any task. Please, add one.</h1>
