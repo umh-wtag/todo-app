@@ -1,25 +1,15 @@
 import React from "react"
-import  "components/header/header.scss"
-import { useDispatch } from "react-redux"
-import { isAdding } from "redux/actions"
-import { useSelector } from "react-redux"
+import "components/header/header.scss"
 import FilterButtons from "components/filterButtons"
 import Button from "components/button"
 
 function Header() {
-  const dispatch = useDispatch()
-
-  const selectIsAdding = (state) => state.todos.isAdding
-  const toggleIsAdding = useSelector(selectIsAdding)
-  function handleClick(event) {
-    dispatch(isAdding(!toggleIsAdding))
-  }
   return (
     <main>
       <div>
         <h1>Add Task</h1>
         <div className="buttons">
-          <Button text="Create" create={handleClick}></Button>
+          <Button text="Create"></Button>
           <FilterButtons />
         </div>
       </div>
