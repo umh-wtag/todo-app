@@ -5,13 +5,13 @@ import Header from "components/header"
 
 function App() {
   return (
-    <main>
+    <fragment>
       <NavBar />
-      <section className="app_container">
+      <div className="app_container">
         <Header />
         <TodoList />
-      </section>
-    </main>
+      </div>
+    </fragment>
   )
 }
 

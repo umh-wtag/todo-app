@@ -8,11 +8,11 @@ import { DELETE_BUTTON_ALT } from "utils/constants"
 
 function AddTodoForm() {
   const dispatch = useDispatch()
-  const [task, setTask] = useState("")
+  const [task, setTask] = useState(null)
   const [err, setErr] = useState(false)
 
-  function handleSubmit(e) {
-    e.preventDefault()
+  function handleSubmit(event) {
+    event.preventDefault()
     if (task.trim() === "") {
       setErr(true)
     } else {
