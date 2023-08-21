@@ -22,7 +22,7 @@ function AddTodoForm() {
     }
   }
   return (
-    <main className="form">
+    <fragment className="form">
       <form className="form__container" onSubmit={handleSubmit}>
         <textarea
           className="form__container__textarea"
@@ -42,7 +42,7 @@ function AddTodoForm() {
           {err && <p> You must add a task </p>}
         </div>
       </form>
-    </main>
+    </fragment>
   )
 }
 

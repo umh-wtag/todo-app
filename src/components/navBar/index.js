@@ -4,7 +4,7 @@ import "components/navBar/navBar.scss"
 import search from "assets/search.png"
 function NavBar() {
   return (
-    <main className="container">
+    <fragment className="container">
       <div className="container__logo">
         <img src={vector} alt="vector"/>
         <h1>Todos</h1>
@@ -12,7 +12,7 @@ function NavBar() {
       <div>
         <img src={search} alt="search" />
       </div>
-    </main>
+    </fragment>
   )
 }
 

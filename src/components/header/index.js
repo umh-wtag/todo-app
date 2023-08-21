@@ -5,7 +5,7 @@ import Button from "components/button"
 
 function Header() {
   return (
-    <main>
+    <fargment>
       <div>
         <h1>Add Task</h1>
         <div className="buttons">
@@ -13,7 +13,7 @@ function Header() {
           <FilterButtons />
         </div>
       </div>
-    </main>
+    </fargment>
   )
 }
 

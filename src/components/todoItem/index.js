@@ -9,7 +9,7 @@ import {
 
 function TodoItem({ todo }) {
   return (
-    <main className="item_card">
+    <fragment className="item_card">
       <h1>{todo.text}</h1>
       <p className="item_card__time"> Created At : {todo.createdAt}</p>
       <div className="item_card__actions">
@@ -29,7 +29,7 @@ function TodoItem({ todo }) {
           className="item_card__actions__img"
         />
       </div>
-    </main>
+    </fragment>
   )
 }
 

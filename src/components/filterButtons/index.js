@@ -4,11 +4,11 @@ import Button from "components/button"
 
 function FilterButtons() {
   return (
-    <div className="filterButtons">
+    <fragment className="filterButtons">
       <Button text="All"></Button>
       <Button text="Incomplete"></Button>
       <Button text="Complete"></Button>
-    </div>
+    </fragment>
   )
 }
 export default FilterButtons
