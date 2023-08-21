@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import "components/todoItem/todoItem.scss"
 import {
   COMPLETE_BUTTON_ALT,
@@ -33,4 +34,7 @@ function TodoItem({ todo }) {
   )
 }
 
+TodoItem.prototypes = {
+  todo: PropTypes.object
+}
 export default TodoItem
