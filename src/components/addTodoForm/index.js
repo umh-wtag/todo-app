@@ -3,12 +3,11 @@ import { useDispatch } from "react-redux"
 import { addNewTodo, isAdding } from "redux/actions"
 import "components/addTodoForm/form.scss"
 import { customSanitize } from "utils/sanitizeInput"
-import { DELETE_BUTTON_ALT,IMAGE_PATHS } from "utils/constants"
-
+import { DELETE_BUTTON_ALT, IMAGE_PATHS } from "utils/constants"
 
 function AddTodoForm() {
   const dispatch = useDispatch()
-  const [task, setTask] = useState(null)
+  const [task, setTask] = useState("")
   const [err, setErr] = useState(false)
 
   function handleSubmit(event) {
@@ -22,7 +21,7 @@ function AddTodoForm() {
     }
   }
   return (
-    <fragment className="form">
+    <div className="form">
       <form className="form__container" onSubmit={handleSubmit}>
         <textarea
           className="form__container__textarea"
@@ -42,7 +41,7 @@ function AddTodoForm() {
           {err && <p> You must add a task </p>}
         </div>
       </form>
-    </fragment>
+    </div>
   )
 }
 

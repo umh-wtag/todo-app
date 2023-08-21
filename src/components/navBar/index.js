@@ -4,15 +4,15 @@ import { IMAGE_PATHS } from "utils/constants"
 
 function NavBar() {
   return (
-    <fragment className="container">
+    <div className="container">
       <div className="container__logo">
-        <img src={IMAGE_PATHS.TODO} alt="vector"/>
+        <img src={IMAGE_PATHS.BRAND_LOGO} alt="vector"/>
         <h1>Todos</h1>
       </div>
       <div>
-        <img src={IMAGE_PATHS.SEARCH} alt="search" />
+        <img src={IMAGE_PATHS.ICON_SEARCH} alt="search" />
       </div>
-    </fragment>
+    </div>
   )
 }
 

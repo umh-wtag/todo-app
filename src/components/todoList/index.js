@@ -18,7 +18,7 @@ const TodoList = () => {
       return <TodoItem key={todo.text} todo={todo} />
     })
   return (
-    <fragment>
+    <div>
       {todos.length < 1 && toggleIsAdding === false && (
         <div className="add">
           <img src={IMAGE_PATHS.ADD} alt="Add First task" className="add__img" />
@@ -29,7 +29,7 @@ const TodoList = () => {
         {toggleIsAdding && <AddTodoForm />}
         {renderedListItems}
       </div>
-    </fragment>
+    </div>
   )
 }
 

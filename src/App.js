@@ -5,13 +5,13 @@ import "app.scss"
 
 function App() {
   return (
-    <fragment>
+    <main>
       <NavBar />
       <div className="app_container">
         <Header />
         <TodoList />
       </div>
-    </fragment>
+    </main>
   )
 }
 

@@ -6,7 +6,6 @@ import "components/header/header.scss"
 
 function Header() {
   return (
-    <fargment>
       <div>
         <h1>Add Task</h1>
         <div className="buttons">
@@ -14,7 +13,6 @@ function Header() {
           <FilterButtons />
         </div>
       </div>
-    </fargment>
   )
 }
 

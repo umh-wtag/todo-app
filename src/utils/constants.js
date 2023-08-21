@@ -14,6 +14,6 @@ export const IMAGE_PATHS = {
   DELETE: trash,
   CHECK: done,
   ADD: add,
-  SEARCH: search,
-  TODO: vector
+  ICON_SEARCH: search,
+  BRAND_LOGO: vector
 }
