@@ -17,7 +17,7 @@ function Button({ text }) {
   return <button onClick={handleClick}>{text}</button>
 }
 Button.prototype = {
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
 }
 
 export default Button
