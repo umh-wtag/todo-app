@@ -2,11 +2,6 @@
   --img: 18rem;
 }
 
-.todoList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
 .add {
   display: flex;
   flex-direction: column;
@@ -19,4 +14,10 @@
   &__img {
     width: var(--img);
   }
+}
+
+.todoList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
