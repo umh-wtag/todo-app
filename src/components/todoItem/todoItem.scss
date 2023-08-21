@@ -1,25 +1,33 @@
+:root {
+  --width-value: 20rem;
+  --height-value: 10.2rem;
+  --default: 1rem;
+  --img-height: 1.3rem;
+  --border: 0.1rem;
+}
+
 .item_card {
-  width: 20rem;
-  height: 10.2rem;
+  width: var(--width-value);
+  height: var(--height-value);
   background-color: white;
-  border: 0.1rem solid #dde2ff;
+  border: var(--border) solid #dde2ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 1rem;
+  padding-left: var(--default);
 
   &__time {
     color: #bbbdd0;
-    font-size: 1rem;
+    font-size: var(--default);
     font-weight: 700;
   }
 
   &__actions {
     display: flex;
-    gap: 1rem;
+    gap: var(--default);
 
     &__img {
-      height: 1.3rem;
+      height: var(--img-height);
     }
   }
 }

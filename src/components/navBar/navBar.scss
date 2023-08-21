@@ -1,16 +1,21 @@
+:root {
+  --padding: 10rem;
+  --border: 0.1rem;
+  --gap: 0.5rem;
+}
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 10rem;
-  padding-left: 10rem;
-  border: 0.1rem solid #dde2ff;
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+  border: var(--border) solid #dde2ff;
   background-color: #ffffff;
 
   &__logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--gap);
     color: #7a8dfd;
   }
 }

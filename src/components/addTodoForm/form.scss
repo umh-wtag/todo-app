@@ -1,33 +1,46 @@
+:root {
+  --width-value: 20rem;
+  --height-value: 10.2rem;
+  --container-width: 18rem;
+  --default: 1rem;
+  --img-height: 1.3rem;
+  --border: 0.15rem;
+  --border-radius: 0.75rem;
+  --text-width: 17rem;
+  --text-height: 4rem;
+  --text-margin-top: 0.5rem;
+}
+
 .form {
-  width: 20rem;
-  height: 10.2rem;
+  width: var(--width-value);
+  height: var(--height-value);
   background-color: #ffffff;
   border: 0.05rem solid #dde2ff;
   position: relative;
 
   &__container {
-    width: 18rem;
+    width: var(--container-width);
     margin: 0 auto;
 
     &__actions {
       display: flex;
-      gap: 1rem;
+      gap: var(--default);
       align-items: center;
-      bottom: 1rem;
+      bottom: var(--default);
       position: absolute;
 
       &__img {
-        height: 1.3rem;
+        height: var(--img-height);
         cursor: pointer;
       }
     }
 
     &__textarea {
-      border: 0.15rem solid #d1d8ff;
-      border-radius: 0.75rem;
-      margin-top: 0.5rem;
-      width: 17rem;
-      height: 4rem;
+      border: var(--border) solid #d1d8ff;
+      border-radius: var(--border-radius);
+      margin-top: var(--text-margin-top);
+      width: var(--text-width);
+      height: var(--text-height);
     }
   }
 }

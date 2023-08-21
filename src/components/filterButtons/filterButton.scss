@@ -1,4 +1,8 @@
+:root {
+  --default: 1rem;
+}
+
 .filterButtons {
   display: flex;
-  gap: 1rem;
+  gap: var(--default);
 }

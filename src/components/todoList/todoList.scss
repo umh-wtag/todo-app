@@ -1,3 +1,7 @@
+:root {
+  --img: 18rem;
+}
+
 .todoList {
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +17,6 @@
   transform: translate(-50%, -50%);
 
   &__img {
-    width: 18rem;
+    width: var(--img);
   }
 }
-
