@@ -1,20 +1,20 @@
 :root {
-  --width-value: 20rem;
-  --height-value: 10.2rem;
-  --default: 1rem;
-  --img-height: 1.3rem;
   --border: 0.1rem;
+  --default: 1rem;
+  --height-value: 10.2rem;
+  --img-height: 1.3rem;
+  --width-value: 20rem;
 }
 
 .item_card {
-  width: var(--width-value);
-  height: var(--height-value);
   background-color: white;
   border: var(--border) solid #dde2ff;
   display: flex;
   flex-direction: column;
+  height: var(--height-value);
   justify-content: center;
   padding-left: var(--default);
+  width: var(--width-value);
 
   &__actions {
     display: flex;
