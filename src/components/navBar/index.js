@@ -1,16 +1,16 @@
 import React from "react"
-import vector from "assets/Vector.png"
 import "components/navBar/navBar.scss"
-import search from "assets/search.png"
+import { IMAGE_PATHS } from "utils/constants"
+
 function NavBar() {
   return (
     <fragment className="container">
       <div className="container__logo">
-        <img src={vector} alt="vector"/>
+        <img src={IMAGE_PATHS.TODO} alt="vector"/>
         <h1>Todos</h1>
       </div>
       <div>
-        <img src={search} alt="search" />
+        <img src={IMAGE_PATHS.SEARCH} alt="search" />
       </div>
     </fragment>
   )

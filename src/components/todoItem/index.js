@@ -1,10 +1,10 @@
 import React from "react"
 import "components/todoItem/todoItem.scss"
-import  {IMAGE_PATHS}  from "utils/constants"
 import {
   COMPLETE_BUTTON_ALT,
   DELETE_BUTTON_ALT,
   EDIT_BUTTON_ALT,
+  IMAGE_PATHS
 } from "utils/constants"
 
 function TodoItem({ todo }) {

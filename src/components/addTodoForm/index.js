@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import "components/addTodoForm/form.scss"
-import trash from "assets/trash.png"
 import { useDispatch } from "react-redux"
 import { addNewTodo, isAdding } from "redux/actions"
+import "components/addTodoForm/form.scss"
 import { customSanitize } from "utils/sanitizeInput"
-import { DELETE_BUTTON_ALT } from "utils/constants"
+import { DELETE_BUTTON_ALT,IMAGE_PATHS } from "utils/constants"
+
 
 function AddTodoForm() {
   const dispatch = useDispatch()
@@ -35,7 +35,7 @@ function AddTodoForm() {
         <div className="form__container__actions">
           <button>Add Task</button>
           <img
-            src={trash}
+            src={IMAGE_PATHS.DELETE}
             alt={DELETE_BUTTON_ALT}
             className="form__container__actions__img"
           />

@@ -1,7 +1,8 @@
 import React from "react"
-import "components/header/header.scss"
 import FilterButtons from "components/filterButtons"
 import Button from "components/button"
+import "components/header/header.scss"
+
 
 function Header() {
   return (
