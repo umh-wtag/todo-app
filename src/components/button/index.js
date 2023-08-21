@@ -2,6 +2,7 @@ import React from "react"
 import { useDispatch } from "react-redux"
 import { isAdding } from "redux/actions"
 import { useSelector } from "react-redux"
+import PropTypes from "prop-types"
 
 function Button({ text }) {
   const dispatch = useDispatch()
@@ -15,4 +16,8 @@ function Button({ text }) {
   }
   return <button onClick={handleClick}>{text}</button>
 }
+Button.prototype = {
+  text: PropTypes.string,
+}
+
 export default Button

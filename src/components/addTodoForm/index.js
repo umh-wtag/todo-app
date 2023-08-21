@@ -8,13 +8,13 @@ import { DELETE_BUTTON_ALT, IMAGE_PATHS } from "utils/constants"
 function AddTodoForm() {
   const dispatch = useDispatch()
   const [task, setTask] = useState("")
-  const [err, setErr] = useState(false)
+  const [isInputFieldEmpty, setIsInputFieldEmpty] = useState(false)
 
   function handleSubmit(event) {
     event.preventDefault()
     if (task.trim() === "") {
       setTask("")
-      setErr(true)
+      setIsInputFieldEmpty(true)
     } else {
       dispatch(addNewTodo(customSanitize(task.trim())))
       setTask("")
@@ -22,24 +22,24 @@ function AddTodoForm() {
     }
   }
   return (
-    <div className="form">
-      <form className="form__container" onSubmit={handleSubmit}>
+    <div className="todo-form">
+      <form className="todo-form__container" onSubmit={handleSubmit}>
         <textarea
-          className="form__container__textarea"
+          className="todo-form__container__textarea"
           name="body"
           placeholder="Add Todo"
           value={task}
           onChange={(e) => setTask(e.target.value)}
           required
         />
-        <div className="form__container__actions">
+        <div className="todo-form__container__actions">
           <button>Add Task</button>
           <img
             src={IMAGE_PATHS.DELETE}
             alt={DELETE_BUTTON_ALT}
-            className="form__container__actions__img"
+            className="todo-form__container__actions__img"
           />
-          {err && <p> You must add a task </p>}
+          {isInputFieldEmpty && <p> You must add a task </p>}
         </div>
       </form>
     </div>
