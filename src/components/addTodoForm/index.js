@@ -13,6 +13,7 @@ function AddTodoForm() {
   function handleSubmit(event) {
     event.preventDefault()
     if (task.trim() === "") {
+      setTask("")
       setErr(true)
     } else {
       dispatch(addNewTodo(customSanitize(task.trim())))
