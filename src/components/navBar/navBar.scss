@@ -5,11 +5,12 @@
   padding-right: 100px;
   padding-left: 100px;
   border: 1px solid #dde2ff;
-  background-color: #FFFFFF;
-}
-.container__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #7a8dfd;
+  background-color: #ffffff;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #7a8dfd;
+  }
 }

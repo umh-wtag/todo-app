@@ -16,9 +16,9 @@ function Header() {
   }
   return (
     <main>
-      <div className="body">
+      <div>
         <h1>Add Task</h1>
-        <div className="body__buttons">
+        <div className="buttons">
           <Button text="Create" create={handleClick}></Button>
           <FilterButtons />
         </div>

@@ -1,10 +1,4 @@
-.body{
-  background-color: #f8f9ff;
-
-  &__buttons{
-    display: flex;
+.buttons {
+  display: flex;
   justify-content: space-between;
-  }
 }
-
-

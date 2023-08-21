@@ -1,4 +1,4 @@
-.card {
+.item_card {
   width: 325px;
   height: 163px;
   background-color: white;
@@ -7,18 +7,19 @@
   flex-direction: column;
   justify-content: center;
   padding-left: 1rem;
-}
-.card__time {
-  color: #bbbdd0;
-  font-size: 17px;
-  font-weight: 700;
-}
 
-.card__actions {
-  display: flex;
-  gap: 1rem;
-}
+  &__time {
+    color: #bbbdd0;
+    font-size: 17px;
+    font-weight: 700;
+  }
 
-.card__actions__img {
-  height: 20px;
+  &__actions {
+    display: flex;
+    gap: 1rem;
+
+    &__img {
+      height: 20px;
+    }
+  }
 }

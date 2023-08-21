@@ -1,6 +1,6 @@
 import React from "react"
 import vector from "assets/Vector.png"
-import "components/navBar/navBar.css"
+import "components/navBar/navBar.scss"
 import search from "assets/search.png"
 function NavBar() {
   return (

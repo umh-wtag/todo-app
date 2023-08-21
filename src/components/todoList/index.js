@@ -1,7 +1,7 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import TodoItem from "components/todoItem"
-import "components/todoList/todoList.css"
+import "components/todoList/todoList.scss"
 import AddTodoForm from "components/addTodoForm"
 import { IMAGE_PATHS } from "utils/constants"
 const selectTodos = (state) => state.todos.todoItems
