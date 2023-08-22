@@ -11,8 +11,11 @@ import {
 function TodoItem({ todo }) {
   return (
     <div className="item_card">
-      <h1>{todo.text}</h1>
-      <p className="item_card__time"> Created At : {todo.createdAt}</p>
+      <div>
+        <h2>{todo.text}</h2>
+        <p className="item_card__time"> Created At : {todo.createdAt}</p>
+      </div>
+      
       <div className="item_card__actions">
         <img
           src={IMAGE_PATHS.CHECK}

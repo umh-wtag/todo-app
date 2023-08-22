@@ -4,16 +4,16 @@
 .item_card {
   background-color: $primary-white;
   border: $sp-1 solid $primary-border;
-  display: flex;
-  flex-direction: column;
   height: calc($sp-24 * 5.1);
-  justify-content: center;
   padding-left: $sp-12;
   width: calc($sp-36 * 8);
+  position: relative;
 
   &__actions {
     display: flex;
     gap: $sp-12;
+    position: absolute;
+    bottom: calc($sp-4 * 3);
 
     &__img {
       height: $sp-20;
