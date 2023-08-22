@@ -9,12 +9,13 @@ import {
   EDIT_BUTTON_ALT,
   IMAGE_PATHS,
 } from "utils/constants"
+import { calculateDate } from "utils/calculateDate"
 
 function TodoItem({ todo }) {
   const dispatch = useDispatch()
   return (
     <div className="item_card">
-      <h2 className={todo.completed === true && 'completed'}>{todo.text}</h2>
+      <h2 className={todo.completed === true ? "completed" : ''}>{todo.text}</h2>
       <div className="item_card__bottom">
         <p className="item_card__time"> Created At : {todo.createdAt}</p>
         <div className="item_card__actions">
@@ -43,7 +44,11 @@ function TodoItem({ todo }) {
               />
             </div>
 
-            <div>{todo.completed === true && <p> Completed </p>}</div>
+            <div>
+              {todo.completed === true && (
+                <p> Completed in {calculateDate(todo.createdAt)} days </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
