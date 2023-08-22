@@ -5,7 +5,7 @@ import {
   COMPLETE_BUTTON_ALT,
   DELETE_BUTTON_ALT,
   EDIT_BUTTON_ALT,
-  IMAGE_PATHS
+  IMAGE_PATHS,
 } from "utils/constants"
 
 function TodoItem({ todo }) {
@@ -34,7 +34,11 @@ function TodoItem({ todo }) {
   )
 }
 
+TodoItem.defaultProps = {
+  todo: {},
+}
+
 TodoItem.prototypes = {
-  todo: PropTypes.object.isRequired
+  todo: PropTypes.object.isRequired,
 }
 export default TodoItem

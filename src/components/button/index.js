@@ -16,7 +16,12 @@ function Button({ text }) {
   }
   return <button onClick={handleClick}>{text}</button>
 }
-Button.prototype = {
+
+Button.defaultProps = {
+  text: "",
+}
+
+Button.propTypes = {
   text: PropTypes.string.isRequired,
 }
 
