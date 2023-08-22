@@ -1,4 +1,6 @@
 import React from "react"
+import { useDispatch } from "react-redux"
+import { deleteTodo } from "redux/actions"
 import PropTypes from "prop-types"
 import "components/todoItem/todoItem.scss"
 import {
@@ -9,6 +11,7 @@ import {
 } from "utils/constants"
 
 function TodoItem({ todo }) {
+  const dispatch = useDispatch()
   return (
     <div className="item_card">
       <h2>{todo.text}</h2>
@@ -29,6 +32,7 @@ function TodoItem({ todo }) {
             src={IMAGE_PATHS.DELETE}
             alt={DELETE_BUTTON_ALT}
             className="item_card__actions__img"
+            onClick={()=> dispatch(deleteTodo(todo.text))}
           />
         </div>
       </div>

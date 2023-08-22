@@ -1,4 +1,4 @@
-import { ADD_TODO, IS_ADDING } from "redux/actions/actionTypes"
+import { ADD_TODO, IS_ADDING, DELETE_TODO } from "redux/actions/actionTypes"
 
 export const addNewTodo = (todo) => {
   return {
@@ -14,6 +14,15 @@ export const isAdding = (value) => {
     type: IS_ADDING,
     payload: {
       val: value,
+    },
+  }
+}
+
+export const deleteTodo = (todo) => {
+  return {
+    type: DELETE_TODO,
+    payload: {
+      deleteText: todo,
     },
   }
 }

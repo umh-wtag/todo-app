@@ -38,6 +38,7 @@ function AddTodoForm() {
           src={IMAGE_PATHS.DELETE}
           alt={DELETE_BUTTON_ALT}
           className="todo-form__container__actions__img"
+          onClick={()=>dispatch(isAdding(false))}
         />
         {isInputFieldEmpty && <p> You must add a task </p>}
       </div>
