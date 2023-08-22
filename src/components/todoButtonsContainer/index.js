@@ -41,7 +41,7 @@ function TodoButtonsContainer({ todo }) {
         />
         {todo.completed === true && (
           <p>
-            Completed in {days} {days > 1 ? "days" : "day"}{" "}
+            Completed in {days <1 ? 1 : days} {days > 1 ? "days" : "day"}
           </p>
         )}
       </div>
