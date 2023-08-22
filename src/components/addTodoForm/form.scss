@@ -2,21 +2,22 @@
 @import "styles/colors";
 
 .todo-form {
-  background-color: $primary-white;
-  border: 0.05rem solid $primary-border;
-  height: calc($sp-20 * 8);
-  position: relative;
-  width: calc($sp-36 * 8);
-
   &__container {
-    margin: 0 auto;
-    width: calc($sp-24 * 9);
+    align-items: center;
+    background-color: $primary-white;
+    border: 0.05rem solid $primary-border;
+    display: flex;
+    flex-direction: column;
+    height: calc($sp-20 * 8);
+    position: relative;
+    width: calc($sp-36 * 8);
 
     &__actions {
       align-items: center;
       bottom: $sp-12;
       display: flex;
       gap: $sp-12;
+      left: $sp-20;
       position: absolute;
 
       &__img {

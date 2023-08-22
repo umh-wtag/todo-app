@@ -22,27 +22,26 @@ function AddTodoForm() {
     }
   }
   return (
-    <div className="todo-form">
-      <form className="todo-form__container" onSubmit={handleSubmit}>
-        <textarea
-          className="todo-form__container__textarea"
-          name="body"
-          placeholder="Add Todo"
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
-          required
+    <form className="todo-form__container" onSubmit={handleSubmit}>
+      <textarea
+        className="todo-form__container__textarea"
+        name="body"
+        placeholder="Add Todo"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+        required
+      />
+
+      <div className="todo-form__container__actions">
+        <button>Add Task</button>
+        <img
+          src={IMAGE_PATHS.DELETE}
+          alt={DELETE_BUTTON_ALT}
+          className="todo-form__container__actions__img"
         />
-        <div className="todo-form__container__actions">
-          <button>Add Task</button>
-          <img
-            src={IMAGE_PATHS.DELETE}
-            alt={DELETE_BUTTON_ALT}
-            className="todo-form__container__actions__img"
-          />
-          {isInputFieldEmpty && <p> You must add a task </p>}
-        </div>
-      </form>
-    </div>
+        {isInputFieldEmpty && <p> You must add a task </p>}
+      </div>
+    </form>
   )
 }
 
