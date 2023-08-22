@@ -8,19 +8,28 @@
   padding-left: $sp-12;
   position: relative;
   width: calc($sp-36 * 8);
-  
-  &__bottom{
+
+  &__bottom {
     bottom: $sp-4;
     position: absolute;
+    width: calc($sp-36 * 8);
   }
 
   &__actions {
     display: flex;
     gap: $sp-12;
-    
+    align-items: center;
+
     &__img {
       height: $sp-20;
       cursor: pointer;
+    }
+
+    &--completed {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: calc($sp-36 * 7);
     }
   }
 
@@ -29,4 +38,9 @@
     font-size: $sp-12;
     font-weight: 700;
   }
+}
+
+.completed {
+  color: $primary-green;
+  text-decoration: line-through;
 }
