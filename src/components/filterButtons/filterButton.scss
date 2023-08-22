@@ -1,8 +1,6 @@
-:root {
-  --default: 1rem;
-}
+@import "styles/variables";
 
 .filter-buttons {
   display: flex;
-  gap: var(--default);
+  gap: $sp-12;
 }

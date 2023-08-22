@@ -1,33 +1,28 @@
-:root {
-  --border: 0.1rem;
-  --default: 1rem;
-  --height-value: 10.2rem;
-  --img-height: 1.3rem;
-  --width-value: 20rem;
-}
+@import "styles/colors";
+@import "styles/variables";
 
 .item_card {
-  background-color: white;
-  border: var(--border) solid #dde2ff;
+  background-color: $primary-white;
+  border: $sp-1 solid $primary-border;
   display: flex;
   flex-direction: column;
-  height: var(--height-value);
+  height: calc($sp-24 * 5.1);
   justify-content: center;
-  padding-left: var(--default);
-  width: var(--width-value);
+  padding-left: $sp-12;
+  width: calc($sp-36 * 8);
 
   &__actions {
     display: flex;
-    gap: var(--default);
+    gap: $sp-12;
 
     &__img {
-      height: var(--img-height);
+      height: $sp-20;
     }
   }
 
   &__time {
-    color: #bbbdd0;
-    font-size: var(--default);
+    color: $primary-gray;
+    font-size: $sp-12;
     font-weight: 700;
   }
 }

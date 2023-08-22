@@ -1,46 +1,36 @@
-:root {
-  --border: 0.15rem;
-  --border-radius: 0.75rem;
-  --container-width: 18rem;
-  --default: 1rem;
-  --height-value: 10.2rem;
-  --img-height: 1.3rem;
-  --text-width: 17rem;
-  --text-height: 4rem;
-  --text-margin-top: 0.5rem;
-  --width-value: 20rem;
-}
+@import "styles/_variables";
+@import "styles/colors";
 
 .todo-form {
-  background-color: #ffffff;
-  border: 0.05rem solid #dde2ff;
-  height: var(--height-value);
+  background-color: $primary-white;
+  border: 0.05rem solid $primary-border;
+  height: calc($sp-20 * 8);
   position: relative;
-  width: var(--width-value);
+  width: calc($sp-36 * 8);
 
   &__container {
     margin: 0 auto;
-    width: var(--container-width);
+    width: calc($sp-24 * 9);
 
     &__actions {
       align-items: center;
-      bottom: var(--default);
+      bottom: $sp-12;
       display: flex;
-      gap: var(--default);
+      gap: $sp-12;
       position: absolute;
 
       &__img {
         cursor: pointer;
-        height: var(--img-height);
+        height: $sp-20;
       }
     }
 
     &__textarea {
-      border: var(--border) solid #d1d8ff;
-      border-radius: var(--border-radius);
-      height: var(--text-height);
-      margin-top: var(--text-margin-top);
-      width: var(--text-width);
+      border: $sp-2 solid $primary-border;
+      border-radius: $sp-8;
+      height: calc($sp-12 * 4);
+      margin-top: $sp-4;
+      width: calc($sp-36 * 6.8);
     }
   }
 }
