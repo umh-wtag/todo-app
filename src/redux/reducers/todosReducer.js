@@ -1,5 +1,5 @@
 import { ADD_TODO, IS_ADDING } from "redux/actions/actionTypes"
-import { formData } from "utils/formDate"
+import { formDate } from "utils/formDate"
 export const initialState = {
   todoItems: [],
   visibilityFiler: "SHOW_ALL",
@@ -16,7 +16,7 @@ export default function todosReducer(state = initialState, action) {
           ...state.todoItems,
           {
             text: text,
-            createdAt: formData(new Date()),
+            createdAt: formDate(new Date()),
             completed: false,
           },
         ],

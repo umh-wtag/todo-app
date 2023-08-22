@@ -1,4 +1,4 @@
-export const formData = (date) =>
+export const formDate = (date) =>
   date
     .toLocaleString("en", {
       day: "numeric",
