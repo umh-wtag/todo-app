@@ -5,7 +5,7 @@
   &__container {
     align-items: center;
     background-color: $primary-white;
-    border: 0.05rem solid $primary-border;
+    border: calc($sp-1 * 0.5 ) solid $primary-border;
     display: flex;
     flex-direction: column;
     height: calc($sp-20 * 8);

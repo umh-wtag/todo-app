@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { useSelector } from "react-redux"
 import TodoItem from "components/todoItem"
 import AddTodoForm from "components/addTodoForm"
@@ -18,7 +18,7 @@ const TodoList = () => {
       return <TodoItem key={todo.text} todo={todo} />
     })
   return (
-    <div>
+    <Fragment>
       {todos.length < 1 && toggleIsAdding === false && (
         <div className="add">
           <img src={IMAGE_PATHS.ADD} alt={ADD_FIRST_TASK} />
@@ -29,7 +29,7 @@ const TodoList = () => {
         {toggleIsAdding && <AddTodoForm />}
         {renderedListItems}
       </div>
-    </div>
+    </Fragment>
   )
 }
 

@@ -1,4 +1,5 @@
 @import "styles/variables";
+
 .add {
   align-items: center;
   display: flex;
@@ -13,4 +14,5 @@
   display: flex;
   flex-wrap: wrap;
   gap: $sp-20;
+  margin-bottom: $sp-36;
 }

@@ -1,14 +1,13 @@
-:root {
-  --container-gap: 5rem;
-}
+@import "src/styles/variables";
+@import "src/styles/colors";
 
 .app_container {
   display: flex;
   flex-direction: column;
-  gap: var(--container-gap);
+  gap: $sp-24;
   margin: 0 auto;
   width: 80%;
 }
 body {
-  background-color: #f8f9ff;
+  background-color: $primary-violet;
 }
