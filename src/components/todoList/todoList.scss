@@ -1,7 +1,4 @@
-:root {
-  --img: 18rem;
-}
-
+@import "styles/variables";
 .add {
   align-items: center;
   display: flex;
@@ -10,14 +7,10 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-
-  &__img {
-    width: var(--img);
-  }
 }
 
 .todoList {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: $sp-20;
 }
