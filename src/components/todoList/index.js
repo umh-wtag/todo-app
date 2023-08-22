@@ -17,6 +17,7 @@ const TodoList = () => {
     .map((todo) => {
       return <TodoItem key={todo.text} todo={todo} />
     })
+  
   return (
     <Fragment>
       {todos.length < 1 && toggleIsAdding === false && (

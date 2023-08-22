@@ -14,11 +14,8 @@ function Button({ text }) {
       dispatch(isAdding(!toggleIsAdding))
     }
   }
+  
   return <button onClick={handleClick}>{text}</button>
-}
-
-Button.defaultProps = {
-  text: "",
 }
 
 Button.propTypes = {

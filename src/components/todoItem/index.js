@@ -36,10 +36,6 @@ function TodoItem({ todo }) {
   )
 }
 
-TodoItem.defaultProps = {
-  todo: {},
-}
-
 TodoItem.prototypes = {
   todo: PropTypes.object.isRequired,
 }
