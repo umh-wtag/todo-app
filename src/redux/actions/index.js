@@ -1,12 +1,12 @@
 import { ADD_TODO, IS_ADDING } from "redux/actions/actionTypes"
-import { formDate } from "utils/formDate"
+import { formatedDate } from "utils/formatedDate"
 
 export const addNewTodo = (todo) => {
   return {
     type: ADD_TODO,
     payload: {
       text: todo,
-      createdAt: formDate(new Date()),
+      createdAt: formatedDate(new Date()),
       completed: false,
     },
   }

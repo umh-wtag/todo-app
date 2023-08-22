@@ -7,28 +7,28 @@ import { DELETE_BUTTON_ALT, IMAGE_PATHS } from "utils/constants"
 
 function AddTodoForm() {
   const dispatch = useDispatch()
-  const [task, setTask] = useState("")
+  const [taskTitle, setTaskTile] = useState("")
   const [isInputFieldEmpty, setIsInputFieldEmpty] = useState(false)
 
-  function handleSubmit(event) {
+  function handleAddTodo(event) {
     event.preventDefault()
-    if (task.trim() === "") {
-      setTask("")
+    if (taskTitle.trim() === "") {
+      setTaskTile("")
       setIsInputFieldEmpty(true)
     } else {
-      dispatch(addNewTodo(customSanitize(task.trim())))
-      setTask("")
+      dispatch(addNewTodo(customSanitize(taskTitle.trim())))
+      taskTitle("")
       dispatch(isAdding(false))
     }
   }
   return (
-    <form className="todo-form__container" onSubmit={handleSubmit}>
+    <form className="todo-form__container" onSubmit={handleAddTodo}>
       <textarea
         className="todo-form__container__textarea"
         name="body"
         placeholder="Add Todo"
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
+        value={taskTitle}
+        onChange={(e) => setTaskTile(e.target.value)}
         required
       />
 

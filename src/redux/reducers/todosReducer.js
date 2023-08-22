@@ -14,9 +14,9 @@ export default function todosReducer(state = initialState, action) {
         todoItems: [
           ...state.todoItems,
           {
-            text: text,
-            createdAt: createdAt,
-            completed: completed,
+            text,
+            createdAt,
+            completed,
           },
         ],
       }
@@ -24,7 +24,7 @@ export default function todosReducer(state = initialState, action) {
       const { isAdding } = action.payload
       return {
         ...state,
-        isAdding: isAdding,
+        isAdding,
       }
     default:
       return state
