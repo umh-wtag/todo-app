@@ -21,6 +21,7 @@ function AddTodoForm() {
       dispatch(isAdding(false))
     }
   }
+  
   return (
     <form className="todo-form__container" onSubmit={handleAddTodo}>
       <textarea
