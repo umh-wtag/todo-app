@@ -17,7 +17,7 @@ function AddTodoForm() {
       setIsInputFieldEmpty(true)
     } else {
       dispatch(addNewTodo(customSanitize(taskTitle.trim())))
-      taskTitle("")
+      setTaskTile("")
       dispatch(isAdding(false))
     }
   }
