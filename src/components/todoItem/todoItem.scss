@@ -6,15 +6,18 @@
   border: $sp-1 solid $primary-border;
   height: calc($sp-24 * 5.1);
   padding-left: $sp-12;
-  width: calc($sp-36 * 8);
   position: relative;
+  width: calc($sp-36 * 8);
+  
+  &__bottom{
+    bottom: $sp-4;
+    position: absolute;
+  }
 
   &__actions {
     display: flex;
     gap: $sp-12;
-    position: absolute;
-    bottom: calc($sp-4 * 3);
-
+    
     &__img {
       height: $sp-20;
     }

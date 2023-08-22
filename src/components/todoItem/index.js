@@ -11,27 +11,26 @@ import {
 function TodoItem({ todo }) {
   return (
     <div className="item_card">
-      <div>
-        <h2>{todo.text}</h2>
+      <h2>{todo.text}</h2>
+      <div className="item_card__bottom">
         <p className="item_card__time"> Created At : {todo.createdAt}</p>
-      </div>
-      
-      <div className="item_card__actions">
-        <img
-          src={IMAGE_PATHS.CHECK}
-          alt={COMPLETE_BUTTON_ALT}
-          className="item_card__actions__img"
-        />
-        <img
-          src={IMAGE_PATHS.EDIT}
-          alt={EDIT_BUTTON_ALT}
-          className="item_card__actions__img"
-        />
-        <img
-          src={IMAGE_PATHS.DELETE}
-          alt={DELETE_BUTTON_ALT}
-          className="item_card__actions__img"
-        />
+        <div className="item_card__actions">
+          <img
+            src={IMAGE_PATHS.CHECK}
+            alt={COMPLETE_BUTTON_ALT}
+            className="item_card__actions__img"
+          />
+          <img
+            src={IMAGE_PATHS.EDIT}
+            alt={EDIT_BUTTON_ALT}
+            className="item_card__actions__img"
+          />
+          <img
+            src={IMAGE_PATHS.DELETE}
+            alt={DELETE_BUTTON_ALT}
+            className="item_card__actions__img"
+          />
+        </div>
       </div>
     </div>
   )
