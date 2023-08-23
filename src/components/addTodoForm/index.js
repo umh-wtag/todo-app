@@ -16,12 +16,18 @@ function AddTodoForm() {
       setTaskTile("")
       setIsInputFieldEmpty(true)
     } else {
-      dispatch(addNewTodo(customSanitize(taskTitle.trim())))
-      setTaskTile("")
-      dispatch(isAdding(false))
+      const satitizedText = customSanitize(taskTitle.trim())
+      if (satitizedText !== "") {
+        dispatch(addNewTodo(customSanitize(taskTitle.trim())))
+        setTaskTile("")
+        dispatch(isAdding(false))
+      } else {
+        setTaskTile("")
+        setIsInputFieldEmpty(true)
+      }
     }
   }
-  
+
   return (
     <form className="todo-form__container" onSubmit={handleAddTodo}>
       <textarea
