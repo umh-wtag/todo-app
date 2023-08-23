@@ -39,4 +39,5 @@ function TodoItem({ todo }) {
 TodoItem.prototypes = {
   todo: PropTypes.object.isRequired,
 }
+
 export default TodoItem

@@ -5,8 +5,9 @@ import AddTodoForm from "components/addTodoForm"
 import "components/todoList/todoList.scss"
 import { IMAGE_PATHS, ADD_FIRST_TASK } from "utils/constants"
 
-const selectTodos = (state) => state.todos.todoItems
+
 const TodoList = () => {
+  const selectTodos = (state) => state.todos.todoItems
   const todos = useSelector(selectTodos)
   const selectIsAdding = (state) => state.todos.isAdding
   const toggleIsAdding = useSelector(selectIsAdding)

@@ -12,4 +12,5 @@ function FilterButtons() {
     </div>
   )
 }
+
 export default FilterButtons
