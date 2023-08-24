@@ -5,14 +5,14 @@ import "components/buttons/imageButton/imageButton.scss"
 function ImageButton({ icon, buttonAltText , onClick}) {
 
   return (
-    <button className="image_button" onClick={onClick}>
+    <button className="image-button" onClick={onClick}>
       <img src={icon} alt={buttonAltText} />
     </button>
   )
 }
 
 ImageButton.defaultProps = {
-  onClick: ()=>{}
+  onClick: function(){}
 }
 
 ImageButton.propTypes = {

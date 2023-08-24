@@ -8,7 +8,7 @@ function App() {
   return (
     <Fragment>
       <NavBar />
-      <div className="app_container">
+      <div className="app-container">
         <Header />
         <TodoList />
       </div>

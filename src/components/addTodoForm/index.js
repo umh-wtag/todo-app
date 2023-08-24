@@ -47,7 +47,7 @@ function AddTodoForm() {
           buttonAltText={DELETE_BUTTON_ALT}
           onClick={() => dispatch(isAdding(false))}
         />
-        {isInputFieldEmpty && <p> You must add a task </p>}
+        {isInputFieldEmpty && <p> You must add a valid task! </p>}
       </div>
     </form>
   )

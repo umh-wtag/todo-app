@@ -12,11 +12,11 @@ import {
 function TodoItem({ todo }) {
   
   return (
-    <div className="item_card">
+    <div className="item-card">
       <h2>{todo.text}</h2>
-      <div className="item_card__bottom">
-        <p className="item_card__time"> Created At : {todo.createdAt}</p>
-        <div className="item_card__actions">
+      <div className="item-card__content">
+        <p className="item-card__time"> Created At : {todo.createdAt}</p>
+        <div className="item-card__actions">
           <ImageButton
             icon={IMAGE_PATHS.CHECK}
             buttonAltText={COMPLETE_BUTTON_ALT}
