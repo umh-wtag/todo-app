@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux"
 import { deleteTodo } from "redux/actions"
 import PropTypes from "prop-types"
 import ImageButton from "components/buttons/imageButton"
+import "components/todoItem/todoItem.scss"
+
 import {
   COMPLETE_BUTTON_ALT,
   DELETE_BUTTON_ALT,

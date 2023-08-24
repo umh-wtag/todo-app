@@ -3,6 +3,7 @@ import Button from "components/buttons"
 import "components/filterButtons/filterButton.scss"
 
 function FilterButtons() {
+  
   return (
     <div className="filter-buttons">
       <Button text="All"></Button>
@@ -11,4 +12,5 @@ function FilterButtons() {
     </div>
   )
 }
+
 export default FilterButtons

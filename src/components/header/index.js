@@ -4,6 +4,7 @@ import Button from "components/buttons"
 import "components/header/header.scss"
 
 function Header() {
+  
   return (
     <Fragment>
       <h1>Add Task</h1>
