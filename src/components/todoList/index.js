@@ -2,8 +2,8 @@ import React, { Fragment } from "react"
 import { useSelector } from "react-redux"
 import TodoItem from "components/todoItem"
 import AddTodoForm from "components/addTodoForm"
-import "components/todoList/todoList.scss"
 import { IMAGE_PATHS, ADD_FIRST_TASK } from "utils/constants"
+import "components/todoList/todoList.scss"
 
 
 const TodoList = () => {

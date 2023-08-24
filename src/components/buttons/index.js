@@ -1,8 +1,9 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useDispatch } from "react-redux"
 import { isAdding } from "redux/actions"
 import { useSelector } from "react-redux"
-import PropTypes from "prop-types"
+
 
 function Button({ text }) {
   const dispatch = useDispatch()

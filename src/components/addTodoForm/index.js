@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import { useDispatch } from "react-redux"
 import { addNewTodo, isAdding } from "redux/actions"
 import ImageButton from "components/buttons/imageButton"
-import "components/addTodoForm/form.scss"
 import { customSanitize } from "utils/sanitizeInput"
 import { DELETE_BUTTON_ALT, IMAGE_PATHS } from "utils/constants"
+import "components/addTodoForm/form.scss"
 
 function AddTodoForm() {
   const dispatch = useDispatch()
