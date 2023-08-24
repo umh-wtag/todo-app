@@ -11,8 +11,10 @@ function TodoItem({ todo }) {
         {todo.text}
       </h2>
       <div className="item_card__bottom">
-        <p className="item_card__time"> Created At : {todo.createdAt}</p>
-          <TodoButtonsContainer todo={todo} />
+        <p className="item_card__time">
+          Created At : {todo.createdAt.creationDate}
+        </p>
+        <TodoButtonsContainer todo={todo} />
       </div>
     </div>
   )

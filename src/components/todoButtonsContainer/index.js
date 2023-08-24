@@ -13,7 +13,6 @@ import { calculateDate } from "utils/calculateDate"
 
 function TodoButtonsContainer({ todo }) {
   const dispatch = useDispatch()
-  const days = calculateDate(todo.createdAt)
 
   return (
     <div className="item_card__actions">
@@ -40,9 +39,7 @@ function TodoButtonsContainer({ todo }) {
           onClick={() => dispatch(deleteTodo(todo.text))}
         />
         {todo.completed === true && (
-          <p>
-            Completed in {days <1 ? 1 : days} {days > 1 ? "days" : "day"}
-          </p>
+          <p>Completed in {calculateDate(todo.createdAt, new Date())}</p>
         )}
       </div>
     </div>
