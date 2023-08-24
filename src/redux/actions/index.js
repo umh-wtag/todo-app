@@ -2,7 +2,7 @@ import {
   ADD_TODO,
   IS_ADDING,
   DELETE_TODO,
-  MARK_COMPLETED,
+  MARK_AS_COMPLETED,
 } from "redux/actions/actionTypes"
 import { formDate } from "utils/formatedDate"
 
@@ -21,7 +21,7 @@ export const isAdding = (value) => {
   return {
     type: IS_ADDING,
     payload: {
-      val: value,
+      isAdding: value,
     },
   }
 }
@@ -37,7 +37,7 @@ export const deleteTodo = (todo) => {
 
 export const markCompleted = (todo) => {
   return {
-    type: MARK_COMPLETED,
+    type: MARK_AS_COMPLETED,
     payload: {
       markCompletedText: todo,
     },

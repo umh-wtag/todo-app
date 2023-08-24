@@ -2,7 +2,7 @@ import {
   ADD_TODO,
   IS_ADDING,
   DELETE_TODO,
-  MARK_COMPLETED,
+  MARK_AS_COMPLETED,
 } from "redux/actions/actionTypes"
 
 export const initialState = {
@@ -27,10 +27,10 @@ export default function todosReducer(state = initialState, action) {
         ],
       }
     case IS_ADDING:
-      const { val } = action.payload
+      const { isAdding } = action.payload
       return {
         ...state,
-        isAdding: val,
+        isAdding,
       }
     case DELETE_TODO:
       const { deleteText } = action.payload
@@ -41,7 +41,7 @@ export default function todosReducer(state = initialState, action) {
         ...state,
         todoItems: newTodoList,
       }
-    case MARK_COMPLETED:
+    case MARK_AS_COMPLETED:
       const { markCompletedText } = action.payload
       const updatedTasks = state.todoItems.map((item) =>
         item.text === markCompletedText ? { ...item, completed: true } : item
