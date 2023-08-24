@@ -37,7 +37,6 @@ function AddTodoForm() {
         placeholder="Add Todo"
         value={taskTitle}
         onChange={(e) => setTaskTile(e.target.value)}
-        required
       />
 
       <div className="todo-form__container__actions">
@@ -47,7 +46,11 @@ function AddTodoForm() {
           buttonAltText={DELETE_BUTTON_ALT}
           onClick={() => dispatch(isAdding(false))}
         />
-        {isInputFieldEmpty && <p> You must add a valid task! </p>}
+        {isInputFieldEmpty && (
+          <p className="todo-form__container__actions--error">
+            You must add a valid task!
+          </p>
+        )}
       </div>
     </form>
   )

@@ -16,9 +16,13 @@
       align-items: center;
       bottom: $sp-12;
       display: flex;
-      gap: $sp-12;
+      gap: $sp-4;
       left: $sp-20;
       position: absolute;
+
+      &--error{
+        font-size: calc($sp-2 * 7);
+      }
     }
 
     &__textarea {
