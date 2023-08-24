@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import ImageButton from "components/buttons/imageButton"
 import "components/todoItem/todoItem.scss"
 import {
   COMPLETE_BUTTON_ALT,
@@ -9,26 +10,24 @@ import {
 } from "utils/constants"
 
 function TodoItem({ todo }) {
+  
   return (
     <div className="item_card">
       <h2>{todo.text}</h2>
       <div className="item_card__bottom">
         <p className="item_card__time"> Created At : {todo.createdAt}</p>
         <div className="item_card__actions">
-          <img
-            src={IMAGE_PATHS.CHECK}
-            alt={COMPLETE_BUTTON_ALT}
-            className="item_card__actions__img"
+          <ImageButton
+            icon={IMAGE_PATHS.CHECK}
+            buttonAltText={COMPLETE_BUTTON_ALT}
           />
-          <img
-            src={IMAGE_PATHS.EDIT}
-            alt={EDIT_BUTTON_ALT}
-            className="item_card__actions__img"
+          <ImageButton
+            icon={IMAGE_PATHS.EDIT}
+            buttonAltText={EDIT_BUTTON_ALT}
           />
-          <img
-            src={IMAGE_PATHS.DELETE}
-            alt={DELETE_BUTTON_ALT}
-            className="item_card__actions__img"
+          <ImageButton
+            icon={IMAGE_PATHS.DELETE}
+            buttonAltText={DELETE_BUTTON_ALT}
           />
         </div>
       </div>
