@@ -1,5 +1,5 @@
 import { ADD_TODO, IS_ADDING, DELETE_TODO } from "redux/actions/actionTypes"
-import { formDate } from "utils/formDate"
+
 export const initialState = {
   todoItems: [],
   visibilityFiler: "SHOW_ALL",
