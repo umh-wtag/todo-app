@@ -4,10 +4,9 @@ import {
   DELETE_TODO,
   MARK_COMPLETED,
 } from "redux/actions/actionTypes"
-import { formDate } from "utils/formDate"
+import { formDate } from "utils/formatedDate"
 
 export const addNewTodo = (todo) => {
-  
   return {
     type: ADD_TODO,
     payload: {

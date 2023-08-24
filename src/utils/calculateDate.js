@@ -1,6 +1,6 @@
-import { formDate } from "./formDate"
+import { formDate } from "./formatedDate"
 
-export const calculateDate = (date , newDate) => {
+export const calculateDate = (date, newDate) => {
   const markedCompletedAt = formDate(newDate)
 
   if (date.creationDate !== markedCompletedAt.creationDate) {
@@ -10,25 +10,20 @@ export const calculateDate = (date , newDate) => {
     const timeDifference = end - start
     const daysPassed = Math.floor(timeDifference / oneDayMilliseconds)
     return `${daysPassed} days`
-  }
-
-  else {
-
+  } else {
     if (date.hours !== markedCompletedAt.hours) {
-      const hour = Number(markedCompletedAt.hours.toString()) -Number(date.hours.toString())
-      return  `${hour} ${hour > 1 ? "hours" : "hour"}`
-    }
-    else if (date.minutes !== markedCompletedAt.minutes) {
+      const hour =
+        Number(markedCompletedAt.hours.toString()) -
+        Number(date.hours.toString())
+      return `${hour} ${hour > 1 ? "hours" : "hour"}`
+    } else if (date.minutes !== markedCompletedAt.minutes) {
       const minutes =
         Number(markedCompletedAt.minutes.toString()) -
         Number(date.minutes.toString())
       return ` ${minutes} ${minutes > 1 ? "minutes" : "minute"}`
-    }
-    else {
+    } else {
       const seconds = markedCompletedAt.minutes - date.minutes
       return `${seconds} ${seconds > 1 ? "seconds" : "second"}`
     }
-
   }
-
 }

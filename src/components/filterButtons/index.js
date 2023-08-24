@@ -1,7 +1,6 @@
 import React from "react"
-import Button from "components/button"
+import Button from "components/buttons"
 import "components/filterButtons/filterButton.scss"
-
 
 function FilterButtons() {
   return (

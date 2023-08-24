@@ -1,17 +1,17 @@
 import React, { Fragment } from "react"
 import FilterButtons from "components/filterButtons"
-import Button from "components/button"
+import Button from "components/buttons"
 import "components/header/header.scss"
 
 function Header() {
   return (
-      <Fragment>
-        <h1>Add Task</h1>
-        <div className="buttons">
-          <Button text="Create"></Button>
-          <FilterButtons />
-        </div>
-      </Fragment>
+    <Fragment>
+      <h1>Add Task</h1>
+      <div className="buttons">
+        <Button text="Create"></Button>
+        <FilterButtons />
+      </div>
+    </Fragment>
   )
 }
 
