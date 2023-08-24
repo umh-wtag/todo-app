@@ -2,37 +2,36 @@ import React from "react"
 import { useDispatch } from "react-redux"
 import { deleteTodo } from "redux/actions"
 import PropTypes from "prop-types"
-import "components/todoItem/todoItem.scss"
+import ImageButton from "components/buttons/imageButton"
 import {
   COMPLETE_BUTTON_ALT,
   DELETE_BUTTON_ALT,
   EDIT_BUTTON_ALT,
   IMAGE_PATHS,
 } from "utils/constants"
+import "components/todoItem/todoItem.scss"
 
 function TodoItem({ todo }) {
   const dispatch = useDispatch()
+
   return (
-    <div className="item_card">
+    <div className="item-card">
       <h2>{todo.text}</h2>
-      <div className="item_card__bottom">
-        <p className="item_card__time"> Created At : {todo.createdAt}</p>
-        <div className="item_card__actions">
-          <img
-            src={IMAGE_PATHS.CHECK}
-            alt={COMPLETE_BUTTON_ALT}
-            className="item_card__actions__img"
+      <div className="item-card__content">
+        <p className="item-card__time"> Created At : {todo.createdAt}</p>
+        <div className="item-card__actions">
+          <ImageButton
+            icon={IMAGE_PATHS.CHECK}
+            buttonAltText={COMPLETE_BUTTON_ALT}
           />
-          <img
-            src={IMAGE_PATHS.EDIT}
-            alt={EDIT_BUTTON_ALT}
-            className="item_card__actions__img"
+          <ImageButton
+            icon={IMAGE_PATHS.EDIT}
+            buttonAltText={EDIT_BUTTON_ALT}
           />
-          <img
-            src={IMAGE_PATHS.DELETE}
-            alt={DELETE_BUTTON_ALT}
-            className="item_card__actions__img"
-            onClick={()=> dispatch(deleteTodo(todo.text))}
+          <ImageButton
+            icon={IMAGE_PATHS.DELETE}
+            buttonAltText={DELETE_BUTTON_ALT}
+            onClick={() => dispatch(deleteTodo(todo.text))}
           />
         </div>
       </div>
@@ -40,11 +39,8 @@ function TodoItem({ todo }) {
   )
 }
 
-TodoItem.defaultProps = {
-  todo: {},
-}
-
 TodoItem.prototypes = {
   todo: PropTypes.object.isRequired,
 }
+
 export default TodoItem
