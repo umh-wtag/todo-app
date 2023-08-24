@@ -5,8 +5,8 @@ import "components/buttons/imageButton/imageButton.scss"
 function ImageButton({ icon, buttonAltText , onClick}) {
 
   return (
-    <button className="image_button">
-      <img src={icon} alt={buttonAltText} onClick={onClick}/>
+    <button className="image_button" onClick={onClick}>
+      <img src={icon} alt={buttonAltText} />
     </button>
   )
 }
