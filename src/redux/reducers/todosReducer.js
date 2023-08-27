@@ -30,7 +30,6 @@ export default function todosReducer(state = initialState, action) {
       }
     case DELETE_TODO:
       const { deleteTodo } = action.payload
-       console.log(deleteTodo)
       const newTodoList = state.todoItems.filter(
         (item) => item.id !== deleteTodo.id
       )
