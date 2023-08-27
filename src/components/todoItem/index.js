@@ -33,7 +33,7 @@ function TodoItem({ todo }) {
           <ImageButton
             icon={IMAGE_PATHS.DELETE}
             buttonAltText={DELETE_BUTTON_ALT}
-            onClick={() => dispatch(deleteTodo(todo.text))}
+            onClick={() => dispatch(deleteTodo(todo))}
           />
         </div>
       </div>

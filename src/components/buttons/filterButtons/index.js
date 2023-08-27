@@ -1,6 +1,6 @@
 import React from "react"
 import Button from "components/buttons"
-import "components/filterButtons/filterButton.scss"
+import "components/buttons/filterButtons/filterButton.scss"
 
 function FilterButtons() {
   

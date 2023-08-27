@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import FilterButtons from "components/filterButtons"
+import FilterButtons from "components/buttons/filterButtons"
 import Button from "components/buttons"
 import "components/header/header.scss"
 
