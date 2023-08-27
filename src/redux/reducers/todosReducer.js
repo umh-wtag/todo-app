@@ -8,12 +8,13 @@ export const initialState = {
 export default function todosReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
-      const { text, createdAt, completed } = action.payload
+      const { id, text, createdAt, completed } = action.payload
       return {
         ...state,
         todoItems: [
           ...state.todoItems,
           {
+            id,
             text,
             createdAt,
             completed,

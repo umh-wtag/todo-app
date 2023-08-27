@@ -36,7 +36,12 @@ function TodoItem({ todo }) {
 }
 
 TodoItem.prototypes = {
-  todo: PropTypes.object.isRequired,
+  todo: PropTypes.shape({
+     id: PropTypes.string.isRequired,
+     text: PropTypes.string.isRequired,
+     createdAt: PropTypes.string.isRequired,
+     completed: PropTypes.bool.isRequired
+  }),
 }
 
 export default TodoItem
