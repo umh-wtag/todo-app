@@ -2,7 +2,7 @@ import React from "react"
 import { useDispatch } from "react-redux"
 import { deleteTodo, markCompleted } from "redux/actions"
 import PropTypes from "prop-types"
-import "components/todoButtonsContainer/todoButtonsContainer.scss"
+import ImageButton from "components/buttons/imageButton"
 import {
   COMPLETE_BUTTON_ALT,
   DELETE_BUTTON_ALT,
@@ -10,6 +10,7 @@ import {
   IMAGE_PATHS,
 } from "utils/constants"
 import { calculateDate } from "utils/calculateDate"
+import "components/todoButtonsContainer/todoButtonsContainer.scss"
 
 function TodoButtonsContainer({ todo }) {
   const dispatch = useDispatch()
@@ -19,28 +20,25 @@ function TodoButtonsContainer({ todo }) {
     <div className="item_card__actions">
       {todo.completed === false && (
         <div className="item_card__actions--incomplete">
-          <img
-            src={IMAGE_PATHS.CHECK}
-            alt={COMPLETE_BUTTON_ALT}
-            className="item_card__actions__img"
+          <ImageButton
+            icon={IMAGE_PATHS.CHECK}
+            buttonAltText={COMPLETE_BUTTON_ALT}
             onClick={() => dispatch(markCompleted(todo.text))}
           />
-          <img
-            src={IMAGE_PATHS.EDIT}
-            alt={EDIT_BUTTON_ALT}
-            className="item_card__actions__img"
+          <ImageButton
+            icon={IMAGE_PATHS.EDIT}
+            buttonAltText={EDIT_BUTTON_ALT}
           />
         </div>
       )}
       <div className="item_card__actions--completed">
-        <img
-          src={IMAGE_PATHS.DELETE}
-          alt={DELETE_BUTTON_ALT}
-          className="item_card__actions__img"
+        <ImageButton
+          icon={IMAGE_PATHS.DELETE}
+          buttonAltText={DELETE_BUTTON_ALT}
           onClick={() => dispatch(deleteTodo(todo.text))}
         />
         {todo.completed === true && (
-          <p>Completed in {daysCount < 1 ? '1 day' : `${daysCount} days`}</p>
+          <p>Completed in {daysCount < 1 ? "1 day" : `${daysCount} days`}</p>
         )}
       </div>
     </div>
