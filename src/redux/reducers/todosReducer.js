@@ -1,4 +1,5 @@
-import { ADD_TODO, IS_ADDING } from "redux/actions/actionTypes"
+import { ADD_TODO, IS_ADDING, DELETE_TODO } from "redux/actions/actionTypes"
+
 export const initialState = {
   todoItems: [],
   visibilityFiler: "SHOW_ALL",
@@ -26,6 +27,15 @@ export default function todosReducer(state = initialState, action) {
       return {
         ...state,
         isAdding,
+      }
+    case DELETE_TODO:
+      const { deleteTodo } = action.payload
+      const newTodoList = state.todoItems.filter(
+        (item) => item.id !== deleteTodo.id
+      )
+      return {
+        ...state,
+        todoItems: newTodoList,
       }
     default:
       return state
