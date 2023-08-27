@@ -9,17 +9,13 @@ import {
   EDIT_BUTTON_ALT,
   IMAGE_PATHS,
 } from "utils/constants"
-import { calculateDate } from "utils/calculateDate"
 import "components/todoButtonsContainer/todoButtonsContainer.scss"
 
 function TodoButtonsContainer({ todo }) {
   const dispatch = useDispatch()
-  let daysCount = calculateDate(todo.createdAt, new Date())
   
   return (
     <div className="item_card__actions">
-      {todo.completed === false && (
-        <div className="item_card__actions--incomplete">
           <ImageButton
             icon={IMAGE_PATHS.CHECK}
             buttonAltText={COMPLETE_BUTTON_ALT}
@@ -28,18 +24,11 @@ function TodoButtonsContainer({ todo }) {
             icon={IMAGE_PATHS.EDIT}
             buttonAltText={EDIT_BUTTON_ALT}
           />
-        </div>
-      )}
-      <div className="item_card__actions--completed">
         <ImageButton
           icon={IMAGE_PATHS.DELETE}
           buttonAltText={DELETE_BUTTON_ALT}
           onClick={() => dispatch(deleteTodo(todo.id))}
         />
-        {todo.completed === true && (
-          <p>Completed in {daysCount < 1 ? "1 day" : `${daysCount} days`}</p>
-        )}
-      </div>
     </div>
   )
 }
