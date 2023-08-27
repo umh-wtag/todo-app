@@ -1,13 +1,12 @@
-import { v4 as uuid } from "uuid"
 import { ADD_TODO, IS_ADDING } from "redux/actions/actionTypes"
 import { formatedDate } from "utils/formatedDate"
 
 export const addNewTodo = (todo) => {
-  
+  const uniqueId = Date.now().toString()
   return {
     type: ADD_TODO,
     payload: {
-      id: uuid(),
+      id: uniqueId,
       text: todo,
       createdAt: formatedDate(new Date()),
       completed: false,
