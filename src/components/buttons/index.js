@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux"
 import { isAdding } from "redux/actions"
 import { useSelector } from "react-redux"
 
-
 function Button({ text }) {
   const dispatch = useDispatch()
   const selectIsAdding = (state) => state.todos.isAdding
