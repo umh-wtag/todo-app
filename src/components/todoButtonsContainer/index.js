@@ -35,7 +35,7 @@ function TodoButtonsContainer({ todo }) {
         <ImageButton
           icon={IMAGE_PATHS.DELETE}
           buttonAltText={DELETE_BUTTON_ALT}
-          onClick={() => dispatch(deleteTodo(todo))}
+          onClick={() => dispatch(deleteTodo(todo.id))}
         />
         {todo.completed === true && (
           <p>Completed in {daysCount < 1 ? "1 day" : `${daysCount} days`}</p>
