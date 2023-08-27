@@ -18,7 +18,7 @@ export default function todosReducer(state = initialState, action) {
             id,
             text,
             createdAt,
-            completed,
+            completed
           },
         ],
       }
