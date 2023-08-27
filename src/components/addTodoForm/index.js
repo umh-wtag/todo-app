@@ -11,24 +11,29 @@ function AddTodoForm() {
   const [taskTitle, setTaskTile] = useState("")
   const [isInputFieldEmpty, setIsInputFieldEmpty] = useState(false)
 
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      handleAddTodo(event)
+    }
+  }
+
   function handleAddTodo(event) {
     event.preventDefault()
     if (taskTitle.trim() === "") {
       setTaskTile("")
       setIsInputFieldEmpty(true)
       return
-    } 
+    }
 
-      const satitizedText = customSanitize(taskTitle)
-      if (satitizedText !== "") {
-        dispatch(addNewTodo(customSanitize(taskTitle)))
-        setTaskTile("")
-        dispatch(isAdding(false))
-      } else {
-        setTaskTile("")
-        setIsInputFieldEmpty(true)
-      }
-    
+    const satitizedText = customSanitize(taskTitle)
+    if (satitizedText !== "") {
+      dispatch(addNewTodo(customSanitize(taskTitle)))
+      setTaskTile("")
+      dispatch(isAdding(false))
+    } else {
+      setTaskTile("")
+      setIsInputFieldEmpty(true)
+    }
   }
 
   return (
@@ -38,6 +43,7 @@ function AddTodoForm() {
         name="body"
         placeholder="Add Todo"
         value={taskTitle}
+        onKeyDown={handleKeyDown}
         onChange={(e) => setTaskTile(e.target.value)}
       />
 
