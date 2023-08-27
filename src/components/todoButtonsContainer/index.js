@@ -39,7 +39,7 @@ function TodoButtonsContainer({ todo }) {
           onClick={() => dispatch(deleteTodo(todo.text))}
         />
         {todo.completed === true && (
-          <p>Completed in {calculateDate(todo.createdAt, new Date())}</p>
+          <p>Completed in {daysCount < 1 ? '1 day' : `${daysCount} days`}</p>
         )}
       </div>
     </div>
