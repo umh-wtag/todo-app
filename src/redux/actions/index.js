@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid"
-import { ADD_TODO, IS_ADDING, DELETE_TODO } from "redux/actions/actionTypes"
+import { ADD_TODO, IS_ADDING } from "redux/actions/actionTypes"
 import { formatedDate } from "utils/formatedDate"
 
 export const addNewTodo = (todo) => {
@@ -20,15 +20,6 @@ export const isAdding = (value) => {
     type: IS_ADDING,
     payload: {
       isAdding: value,
-    },
-  }
-}
-
-export const deleteTodo = (todo) => {
-  return {
-    type: DELETE_TODO,
-    payload: {
-      deleteTodo: todo,
     },
   }
 }
