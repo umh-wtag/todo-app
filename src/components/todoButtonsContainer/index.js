@@ -13,7 +13,7 @@ import { calculateDate } from "utils/calculateDate"
 
 function TodoButtonsContainer({ todo }) {
   const dispatch = useDispatch()
-
+  let daysCount = calculateDate(todo.createdAt, new Date())
   return (
     <div className="item_card__actions">
       {todo.completed === false && (
