@@ -1,4 +1,4 @@
-import { ADD_TODO, IS_ADDING , DELETE_TODO } from "redux/actions/actionTypes"
+import { ADD_TODO, IS_ADDING , DELETE_TODO , MARK_AS_COMPLETED} from "redux/actions/actionTypes"
 
 export const initialState = {
   todoItems: [],
@@ -18,7 +18,7 @@ export default function todosReducer(state = initialState, action) {
             id,
             text,
             createdAt,
-            completed
+            completed,
           },
         ],
       }
@@ -37,6 +37,16 @@ export default function todosReducer(state = initialState, action) {
       return {
         ...state,
         todoItems: newTodoList,
+      }
+
+    case MARK_AS_COMPLETED:
+      const { markCompletedTodo } = action.payload
+      const updatedTasks = state.todoItems.map((item) =>
+        item.id === markCompletedTodo.id ? { ...item, completed: true } : item
+      )
+      return {
+        ...state,
+        todoItems: updatedTasks,
       }
     
     default:
