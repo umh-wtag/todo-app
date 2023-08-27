@@ -2,17 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import ImageButton from "components/buttons/imageButton"
 import "components/todoItem/todoItem.scss"
-
 import {
   COMPLETE_BUTTON_ALT,
   DELETE_BUTTON_ALT,
   EDIT_BUTTON_ALT,
   IMAGE_PATHS,
 } from "utils/constants"
-import "components/todoItem/todoItem.scss"
 
 function TodoItem({ todo }) {
-
+  
   return (
     <div className="item-card">
       <h2>{todo.text}</h2>
