@@ -14,12 +14,13 @@ export const initialState = {
 export default function todosReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
-      const { text , createdAt , completed} = action.payload
+      const {id, text, createdAt, completed } = action.payload
       return {
         ...state,
         todoItems: [
           ...state.todoItems,
           {
+            id,
             text,
             createdAt,
             completed
@@ -33,18 +34,18 @@ export default function todosReducer(state = initialState, action) {
         isAdding,
       }
     case DELETE_TODO:
-      const { deleteText } = action.payload
+      const { deleteTodo } = action.payload
       const newTodoList = state.todoItems.filter(
-        (item) => item.text !== deleteText
+        (item) => item.id !== deleteTodo.id
       )
       return {
         ...state,
         todoItems: newTodoList,
       }
     case MARK_AS_COMPLETED:
-      const { markCompletedText } = action.payload
+      const { markCompletedTodo } = action.payload
       const updatedTasks = state.todoItems.map((item) =>
-        item.text === markCompletedText ? { ...item, completed: true } : item
+        item.id === markCompletedTodo.id ? { ...item, completed: true } : item
       )
       return {
         ...state,

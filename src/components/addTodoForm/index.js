@@ -17,9 +17,9 @@ function AddTodoForm() {
       setTaskTile("")
       setIsInputFieldEmpty(true)
     } else {
-      const satitizedText = customSanitize(taskTitle.trim())
+      const satitizedText = customSanitize(taskTitle)
       if (satitizedText !== "") {
-        dispatch(addNewTodo(customSanitize(taskTitle.trim())))
+        dispatch(addNewTodo(customSanitize(taskTitle)))
         setTaskTile("")
         dispatch(isAdding(false))
       } else {

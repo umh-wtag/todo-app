@@ -16,7 +16,7 @@ const TodoList = () => {
     .slice(0)
     .reverse()
     .map((todo) => {
-      return <TodoItem key={todo.text} todo={todo} />
+      return <TodoItem key={todo.id} todo={todo} />
     })
   
   return (
