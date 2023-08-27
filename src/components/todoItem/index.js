@@ -43,7 +43,7 @@ TodoItem.prototypes = {
      text: PropTypes.string.isRequired,
      createdAt: PropTypes.string.isRequired,
      completed: PropTypes.bool.isRequired
-  }),
+  }).isRequired,
 }
 
 export default TodoItem
