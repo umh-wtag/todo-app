@@ -10,25 +10,24 @@ function AddTodoForm() {
   const dispatch = useDispatch()
   const [taskTitle, setTaskTile] = useState("")
   const [isInputFieldEmpty, setIsInputFieldEmpty] = useState(false)
-  
+
   function handleAddTodo(event) {
     event.preventDefault()
     if (taskTitle.trim() === "") {
       setTaskTile("")
       setIsInputFieldEmpty(true)
       return
-    } 
+    }
 
-      const satitizedText = customSanitize(taskTitle)
-      if (satitizedText !== "") {
-        dispatch(addNewTodo(customSanitize(taskTitle)))
-        setTaskTile("")
-        dispatch(isAdding(false))
-      } else {
-        setTaskTile("")
-        setIsInputFieldEmpty(true)
-      }
-    
+    const satitizedText = customSanitize(taskTitle)
+    if (satitizedText !== "") {
+      dispatch(addNewTodo(customSanitize(taskTitle)))
+      setTaskTile("")
+      dispatch(isAdding(false))
+    } else {
+      setTaskTile("")
+      setIsInputFieldEmpty(true)
+    }
   }
 
   return (
