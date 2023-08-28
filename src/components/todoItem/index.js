@@ -1,19 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import TodoButtonsContainer from "components/todoButtonsContainer"
-import "components/todoItem/todoItem.scss"
 
 function TodoItem({ todo }) {
   
   return (
     <div className="item_card">
-      <h2 className={todo.completed === true ? "completed" : ""}>
-        {todo.text}
-      </h2>
+      <h2>{todo.text}</h2>
       <div className="item_card__bottom">
-        <p className="item_card__time">
-          Created At : {todo.createdAt}
-        </p>
+        <p className="item_card__time">Created At : {todo.createdAt}</p>
         <TodoButtonsContainer todo={todo} />
       </div>
     </div>
@@ -22,10 +17,10 @@ function TodoItem({ todo }) {
 
 TodoItem.prototypes = {
   todo: PropTypes.shape({
-     id: PropTypes.string.isRequired,
-     text: PropTypes.string.isRequired,
-     createdAt: PropTypes.string.isRequired,
-     completed: PropTypes.bool.isRequired
+    id: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
   }).isRequired,
 }
 
