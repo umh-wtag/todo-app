@@ -37,7 +37,11 @@ function AddTodoForm() {
   }
 
   return (
-    <form className="todo-form__container" onSubmit={handleAddTodo}>
+    <form
+      className="todo-form__container"
+      onSubmit={handleAddTodo}
+      data-testid="add-todo-form"
+    >
       <textarea
         className="todo-form__container__textarea"
         name="body"

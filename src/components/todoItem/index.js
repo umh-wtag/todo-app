@@ -14,7 +14,7 @@ import "components/todoItem/todoItem.scss"
 function TodoItem({ todo }) {
 
   return (
-    <div className="item-card">
+    <div className="item-card" data-testid="item-card">
       <h2>{todo.text}</h2>
       <div className="item-card__content">
         <p className="item-card__time"> Created At : {todo.createdAt}</p>
