@@ -4,7 +4,7 @@ import {
   DELETE_TODO,
   MARK_AS_COMPLETED,
   IS_EDITING,
-  UPDATE_TODO
+  UPDATE_TODO,
 } from "redux/actions/actionTypes"
 
 export const initialState = {
@@ -44,9 +44,9 @@ export default function todosReducer(state = initialState, action) {
       )
       return {
         ...state,
-        todoItems: isEditingTodo
+        todoItems: isEditingTodo,
       }
-    
+
     case DELETE_TODO:
       const { deleteTodoId } = action.payload
       const newTodoList = state.todoItems.filter(
@@ -66,20 +66,20 @@ export default function todosReducer(state = initialState, action) {
         ...state,
         todoItems: updatedTasks,
       }
-    
+
     case UPDATE_TODO:
-      const { updatedTodo ,taskTitle} = action.payload
+      const { updatedTodo, taskTitle } = action.payload
       const editedTasks = state.todoItems.map((item) =>
-        item.id === updatedTodo.id ? { ...item, text: taskTitle , editing:false } : item
+        item.id === updatedTodo.id
+          ? { ...item, text: taskTitle, editing: false }
+          : item
       )
-      console.log(editedTasks)
       return {
         ...state,
-        todoItems :editedTasks
+        todoItems: editedTasks,
       }
-      
+
     default:
       return state
   }
-  
 }

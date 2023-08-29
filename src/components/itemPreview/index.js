@@ -1,5 +1,6 @@
 import TodoButtonsContainer from "components/todoButtonsContainer"
 import "components/itemPreview/itemPreview.scss"
+
 function ItemPreview({ todo, editing }) {
 
   return (
@@ -12,8 +13,7 @@ function ItemPreview({ todo, editing }) {
         <TodoButtonsContainer todo={todo} editing={editing} />
       </div>
     </div>
-  )
-    
+  ) 
 }
 
 export default ItemPreview

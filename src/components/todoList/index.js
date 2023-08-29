@@ -12,10 +12,6 @@ const TodoList = () => {
   const selectIsAdding = (state) => state.todos.isAdding
   const toggleIsAdding = useSelector(selectIsAdding)
   
-  const renderedItems = todos.map((item) =>
-    <TodoItem todo={ item } />
-  )
-  
   return (
     <Fragment>
       {todos.length < 1 && toggleIsAdding === false && (
@@ -26,7 +22,7 @@ const TodoList = () => {
       )}
       <div className="todoList">
         {toggleIsAdding && <AddTodoForm />}
-        {renderedItems}
+        {todos.map((item) =><TodoItem todo={ item } />)}
       </div>
     </Fragment>
   )

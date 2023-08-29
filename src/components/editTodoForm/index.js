@@ -27,6 +27,14 @@ function EditTodoForm({ todo }) {
       setIsInputFieldEmpty(true)
     }
   }
+  
+  function handleChange(event) {
+    setTaskTile(event.target.value)
+  }
+
+  function dispatchDelete() {
+    dispatch(isEditing(todo,false))
+  }
 
   return (
     <form className="todo-form__container" onSubmit={handleEditTodo}>
@@ -35,7 +43,7 @@ function EditTodoForm({ todo }) {
         name="body"
         placeholder="Add Todo"
         value={taskTitle}
-        onChange={(e) => setTaskTile(e.target.value)}
+        onChange={handleChange}
       />
 
       <div className="todo-form__container__actions">
@@ -43,7 +51,7 @@ function EditTodoForm({ todo }) {
         <ImageButton
           icon={IMAGE_PATHS.DELETE}
           buttonAltText={DELETE_BUTTON_ALT}
-          onClick={() => dispatch(isEditing(todo,false))}
+          onClick={dispatchDelete}
         />
         {isInputFieldEmpty && (
           <p className="todo-form__container__actions--error">
