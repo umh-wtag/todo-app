@@ -1,6 +1,6 @@
 import React from "react"
 import { useDispatch } from "react-redux"
-import { deleteTodo, markCompleted } from "redux/actions"
+import { deleteTodo, isEditing, markCompleted } from "redux/actions"
 import PropTypes from "prop-types"
 import ImageButton from "components/buttons/imageButton"
 import {
@@ -12,7 +12,7 @@ import {
 import { calculateDate } from "utils/calculateDate"
 import "components/todoButtonsContainer/todoButtonsContainer.scss"
 
-function TodoButtonsContainer({ todo }) {
+function TodoButtonsContainer({ todo , editing}) {
   const dispatch = useDispatch()
   let daysCount = calculateDate(todo.createdAt, new Date())
   
@@ -28,6 +28,7 @@ function TodoButtonsContainer({ todo }) {
           <ImageButton
             icon={IMAGE_PATHS.EDIT}
             buttonAltText={EDIT_BUTTON_ALT}
+            onClick={()=>dispatch(isEditing(!editing))}
           />
         </div>
       )}

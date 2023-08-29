@@ -3,6 +3,8 @@ import {
   IS_ADDING,
   DELETE_TODO,
   MARK_AS_COMPLETED,
+  IS_EDITING,
+  UPDATE_TODO
 } from "redux/actions/actionTypes"
 import { formatedDate } from "utils/formatedDate"
 
@@ -27,6 +29,15 @@ export const isAdding = (value) => {
   }
 }
 
+export const isEditing = (value) => {
+  return {
+    type: IS_EDITING,
+    payload: {
+      isEditing: value,
+    },
+  }
+}
+
 export const deleteTodo = (todo) => {
   return {
     type: DELETE_TODO,
@@ -41,6 +52,16 @@ export const markCompleted = (todo) => {
     type: MARK_AS_COMPLETED,
     payload: {
       markCompletedTodo: todo,
+    },
+  }
+}
+
+export const updateTodo = (todo, taskTitle) => {
+  return {
+    type: UPDATE_TODO,
+    payload: {
+      updatedTodo: todo,
+      taskTitle,
     },
   }
 }
