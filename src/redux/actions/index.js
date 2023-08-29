@@ -1,4 +1,3 @@
-import { v4 as uuid } from 'uuid'
 import {
   ADD_TODO,
   IS_ADDING,
@@ -11,7 +10,7 @@ export const addNewTodo = (todo) => {
   return {
     type: ADD_TODO,
     payload: {
-      id: uuid(),
+      id: Date.now().toString(),
       text: todo,
       createdAt: formatedDate(new Date()),
       completed: false,
