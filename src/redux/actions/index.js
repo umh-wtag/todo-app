@@ -1,4 +1,4 @@
-import { ADD_TODO, IS_ADDING, DELETE_TODO } from "redux/actions/actionTypes"
+import { ADD_TODO, IS_ADDING, DELETE_TODO , MARK_AS_COMPLETED } from "redux/actions/actionTypes"
 import { formatedDate } from "utils/formatedDate"
 
 export const addNewTodo = (todo) => {
@@ -31,4 +31,11 @@ export const deleteTodo = (id) => {
     },
   }
 }
-
+export const markCompleted = (todo) => {
+  return {
+    type: MARK_AS_COMPLETED,
+    payload: {
+      markCompletedTodo: todo,
+    },
+  }
+}
