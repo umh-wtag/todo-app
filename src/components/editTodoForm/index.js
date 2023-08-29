@@ -43,7 +43,7 @@ function EditTodoForm({ todo }) {
         <ImageButton
           icon={IMAGE_PATHS.DELETE}
           buttonAltText={DELETE_BUTTON_ALT}
-          onClick={() => dispatch(isEditing(false))}
+          onClick={() => dispatch(isEditing(todo,false))}
         />
         {isInputFieldEmpty && (
           <p className="todo-form__container__actions--error">
