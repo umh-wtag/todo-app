@@ -12,7 +12,7 @@ export const addNewTodo = (todo) => {
   return {
     type: ADD_TODO,
     payload: {
-      id: Date.now.toString(),
+      id: Date.now().toString(),
       text: todo,
       createdAt: formatedDate(new Date()),
       completed: false,
