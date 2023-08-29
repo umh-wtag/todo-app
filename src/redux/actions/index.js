@@ -9,7 +9,7 @@ import {
 import { formatedDate } from "utils/formatedDate"
 
 export const addNewTodo = (todo) => {
-  const uniqueId = Date.now().toString()
+  
   return {
     type: ADD_TODO,
     payload: {
