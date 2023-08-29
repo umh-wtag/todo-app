@@ -9,6 +9,7 @@ import {
 import { formatedDate } from "utils/formatedDate"
 
 export const addNewTodo = (todo) => {
+  const uniqueId = Date.now().toString()
   return {
     type: ADD_TODO,
     payload: {
@@ -42,11 +43,10 @@ export const deleteTodo = (todo) => {
   return {
     type: DELETE_TODO,
     payload: {
-      deleteTodo: todo,
+      deleteTodoId : todo,
     },
   }
 }
-
 export const markCompleted = (todo) => {
   return {
     type: MARK_AS_COMPLETED,

@@ -15,7 +15,7 @@ import "components/todoButtonsContainer/todoButtonsContainer.scss"
 function TodoButtonsContainer({ todo , editing}) {
   const dispatch = useDispatch()
   let daysCount = calculateDate(todo.createdAt, new Date())
-  
+
   return (
     <div className="item_card__actions">
       {todo.completed === false && (
@@ -36,7 +36,7 @@ function TodoButtonsContainer({ todo , editing}) {
         <ImageButton
           icon={IMAGE_PATHS.DELETE}
           buttonAltText={DELETE_BUTTON_ALT}
-          onClick={() => dispatch(deleteTodo(todo))}
+          onClick={() => dispatch(deleteTodo(todo.id))}
         />
         {todo.completed === true && (
           <p>Completed in {daysCount < 1 ? "1 day" : `${daysCount} days`}</p>

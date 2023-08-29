@@ -45,14 +45,15 @@ export default function todosReducer(state = initialState, action) {
       }
     
     case DELETE_TODO:
-      const { deleteTodo } = action.payload
+      const { deleteTodoId } = action.payload
       const newTodoList = state.todoItems.filter(
-        (item) => item.id !== deleteTodo.id
+        (item) => item.id !== deleteTodoId
       )
       return {
         ...state,
         todoItems: newTodoList,
       }
+
     case MARK_AS_COMPLETED:
       const { markCompletedTodo } = action.payload
       const updatedTasks = state.todoItems.map((item) =>
