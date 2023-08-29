@@ -17,6 +17,7 @@ export const addNewTodo = (todo) => {
       text: todo,
       createdAt: formatedDate(new Date()),
       completed: false,
+      editing: false,
     },
   }
 }
@@ -30,10 +31,11 @@ export const isAdding = (value) => {
   }
 }
 
-export const isEditing = (value) => {
+export const isEditing = (todo,value) => {
   return {
     type: IS_EDITING,
     payload: {
+      editedTodo : todo,
       isEditing: value,
     },
   }

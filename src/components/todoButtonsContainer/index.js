@@ -28,7 +28,7 @@ function TodoButtonsContainer({ todo , editing}) {
           <ImageButton
             icon={IMAGE_PATHS.EDIT}
             buttonAltText={EDIT_BUTTON_ALT}
-            onClick={()=>dispatch(isEditing(!editing))}
+            onClick={()=>dispatch(isEditing(todo,!editing))}
           />
         </div>
       )}

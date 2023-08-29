@@ -1,5 +1,4 @@
 import React from "react"
-import { useSelector } from "react-redux/es/hooks/useSelector"
 import PropTypes from "prop-types"
 import EditTodoForm from "components/editTodoForm"
 import ItemPreview from "components/itemPreview"
@@ -7,16 +6,16 @@ import "components/todoItem/todoItem.scss"
 
 
 function TodoItem({ todo }) {
-  const isEditing = (state) => state.todos.isEditing
-  const toggleEdit = useSelector(isEditing)
-
+  
   return (
-    <div>
-      {toggleEdit ? (
-        <EditTodoForm todo={todo} />
-      ) : (
-        <ItemPreview todo={todo} editing={toggleEdit} />
-      )}
+    <div className="todoList">
+      {
+        todo.editing ? (
+          <EditTodoForm key={todo.id} todo={todo} />
+        ) : (
+          <ItemPreview key={todo.id} todo={todo} editing={todo.editing} />
+        )
+      }
     </div>
   )
 

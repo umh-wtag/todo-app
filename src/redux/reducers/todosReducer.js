@@ -11,13 +11,12 @@ export const initialState = {
   todoItems: [],
   visibilityFiler: "SHOW_ALL",
   isAdding: false,
-  isEditing:false
 }
 
 export default function todosReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
-      const { id, text, createdAt, completed } = action.payload
+      const { id, text, createdAt, completed, editing } = action.payload
       return {
         ...state,
         todoItems: [
@@ -27,8 +26,9 @@ export default function todosReducer(state = initialState, action) {
             text,
             createdAt,
             completed,
+            editing,
           },
-        ],
+        ].reverse(),
       }
     case IS_ADDING:
       const { isAdding } = action.payload
@@ -38,10 +38,13 @@ export default function todosReducer(state = initialState, action) {
       }
 
     case IS_EDITING:
-      const { isEditing } = action.payload
+      const { isEditing, editedTodo } = action.payload
+      const isEditingTodo = state.todoItems.map((item) =>
+        item.id === editedTodo.id ? { ...item, editing: isEditing } : item
+      )
       return {
         ...state,
-        isEditing,
+        todoItems: isEditingTodo
       }
     
     case DELETE_TODO:
@@ -67,8 +70,9 @@ export default function todosReducer(state = initialState, action) {
     case UPDATE_TODO:
       const { updatedTodo ,taskTitle} = action.payload
       const editedTasks = state.todoItems.map((item) =>
-        item.id === updatedTodo.id ? { ...item, text: taskTitle } : item
+        item.id === updatedTodo.id ? { ...item, text: taskTitle , editing:false } : item
       )
+      console.log(editedTasks)
       return {
         ...state,
         todoItems :editedTasks
