@@ -3,7 +3,12 @@ import { useDispatch } from "react-redux"
 import { isEditing, updateTodo } from "redux/actions"
 import ImageButton from "components/buttons/imageButton"
 import { customSanitize } from "utils/sanitizeInput"
-import { DELETE_BUTTON_ALT, IMAGE_PATHS } from "utils/constants"
+import {
+  DELETE_BUTTON_ALT,
+  IMAGE_PATHS,
+  ADD_TODO_INPUT_PLACEHOLDER,
+  ADD_TODO_INPUT_NAME,
+} from "utils/constants"
 import "components/addTodoForm/form.scss"
 
 function EditTodoForm({ todo }) {
@@ -27,21 +32,21 @@ function EditTodoForm({ todo }) {
       setIsInputFieldEmpty(true)
     }
   }
-  
+
   function handleChange(event) {
     setTaskTile(event.target.value)
   }
 
   function dispatchDelete() {
-    dispatch(isEditing(todo,false))
+    dispatch(isEditing(todo, false))
   }
 
   return (
     <form className="todo-form__container" onSubmit={handleEditTodo}>
       <textarea
         className="todo-form__container__textarea"
-        name="body"
-        placeholder="Add Todo"
+        name={ADD_TODO_INPUT_NAME}
+        placeholder={ADD_TODO_INPUT_PLACEHOLDER}
         value={taskTitle}
         onChange={handleChange}
       />
@@ -61,7 +66,6 @@ function EditTodoForm({ todo }) {
       </div>
     </form>
   )
-  
 }
 
 export default EditTodoForm

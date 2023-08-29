@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
-import { deleteTodo, isEditing, markCompleted } from "redux/actions"
 import PropTypes from "prop-types"
+import { deleteTodo, isEditing, markCompleted } from "redux/actions"
 import ImageButton from "components/buttons/imageButton"
 import {
   COMPLETE_BUTTON_ALT,
