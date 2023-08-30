@@ -20,7 +20,7 @@ export default function todosReducer(state = initialState, action) {
             createdAt,
             completed,
           },
-        ],
+        ].reverse(),
       }
     case IS_ADDING:
       const { isAdding } = action.payload

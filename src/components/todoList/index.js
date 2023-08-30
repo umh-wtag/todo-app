@@ -11,13 +11,6 @@ const TodoList = () => {
   const todos = useSelector(selectTodos)
   const selectIsAdding = (state) => state.todos.isAdding
   const toggleIsAdding = useSelector(selectIsAdding)
-
-  const renderedListItems = todos
-    .slice(0)
-    .reverse()
-    .map((todo) => {
-      return <TodoItem key={todo.id} todo={todo} />
-    })
   
   return (
     <Fragment>
@@ -29,7 +22,9 @@ const TodoList = () => {
       )}
       <div className="todoList">
         {toggleIsAdding && <AddTodoForm />}
-        {renderedListItems}
+        {todos.map((todo) => {
+          return <TodoItem key={todo.id} todo={todo} />
+        })}
       </div>
     </Fragment>
   )
