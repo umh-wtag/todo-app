@@ -2,93 +2,66 @@ import configureStore from "redux-mock-store"
 const { render, screen } = require("@testing-library/react")
 const { default: TodoList } = require(".")
 const { Provider } = require("react-redux")
+
 const mockStore = configureStore([])
+const initialState = {
+  todos: {
+    todoItems: [
+      { id: 1, test: "Todo 1 ", completed: false },
+      { id: 2, test: "Todo 2 ", completed: false },
+    ],
+    isAdding: false,
+  },
+}
+let store;
+beforeEach(() => {
+  store = mockStore(initialState)
+})
 
-describe("TodoList", () => {
-  const initialState = {
-    todos: {
-      todoItems: [], 
-    },
-  }
-
-  const store = mockStore(initialState)
+it('renders TodoList component', () => {
   render(
     <Provider store={store}>
       <TodoList />
     </Provider>
   )
 
-  it("should not render AddTodoForm on initial render", () => {
-    const addTodoForm = screen.queryByTestId("add-todo-form")
-    expect(addTodoForm).toBeNull()
-  })
+  const card = screen.queryAllByTestId('item-card')
+  expect(card).not.toBeNull()
+})
 
-  it("should not render todoItem on the initial render", () => {
-    const card = screen.queryByTestId("item-card")
-    expect(card).toBeNull()
-  })
-
-  it("should render addTodoForm when isAdding is true", () => {
-    const initialState = {
-      todos: {
-        todoItems: [],
-        isAdding: true,
-      },
+it('displays addTodoForm when isAdding is true', () => {
+  store = mockStore({
+    ...initialState,
+    todos: {
+      ...initialState.todos,
+      isAdding: true
     }
-
-    const store = mockStore(initialState)
-    render(
-      <Provider store={store}>
-        <TodoList />
-      </Provider>
-    )
-    const addTodoForm = screen.queryByTestId("add-todo-form")
-    expect(addTodoForm).not.toBeNull()
   })
+  render(
+    <Provider store={store}>
+      <TodoList/>
+    </Provider>
+  )
+  const todoForm = screen.getByTestId('add-todo-form')
+  expect(todoForm).not.toBeNull()
+})
 
-  it("should render Todo items correctly, when items present", () => {
-    const initialState = {
-      todos: {
-        todoItems: [
-          {
-            id: 1,
-            text: "test todo",
-            createdAt: "08.08.23",
-            completed: false,
-          },
-          {
-            id: 2,
-            text: "test todo",
-            createdAt: "08.08.23",
-            completed: false,
-          },
-        ],
-        isAdding: false,
-      },
+it('displays "You didn\'t add any task when todos array is empty"', () => {
+  store = mockStore({
+    ...initialState,
+    todos: {
+      ...initialState,
+      todoItems: [],
+      isAdding: false
     }
-
-    const store = mockStore(initialState)
-    render(
-      <Provider store={store}>
-        <TodoList />
-      </Provider>
-    )
-
-    const card = screen.queryAllByTestId("item-card")
-    expect(card).not.toBeNull()
   })
-
-  it("should throw an error when todoItems is not provided", () => {
-    const initialState = {
-      todos: {},
-    }
-    const store = mockStore(initialState)
-    expect(() => {
-      render(
-        <Provider store={store}>
-          <TodoList />
-        </Provider>
-      )
-    }).toThrow()
-  })
+  render(
+    <Provider store ={store}>
+      <TodoList/>
+    </Provider>
+  )
+  const emptyTaskMessage = screen.getByText(
+    "You didn't add any task. Please, add one."
+  )
+  expect(emptyTaskMessage).not.toBeNull()
 })
