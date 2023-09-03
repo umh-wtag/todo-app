@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 function Button({ text, onClick }) {
 
-  return <button onClick={onClick}>{text}</button>
+  return <button onClick={onClick} data-testid="button">{text}</button>
 }
 
 Button.propTypes = {
