@@ -5,7 +5,7 @@ import "components/buttons/filterButtons/filterButton.scss"
 function FilterButtons() {
   
   return (
-    <div className="filter-buttons">
+    <div className="filter-buttons" data-testid="filter-buttons">
       <Button text="All"></Button>
       <Button text="Incomplete"></Button>
       <Button text="Complete"></Button>
