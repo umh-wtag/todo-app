@@ -1,4 +1,3 @@
-import configureStore from "redux-mock-store"
 import { useDispatch } from "react-redux"
 import { fireEvent, render, screen } from "@testing-library/react"
 import "@testing-library/jest-dom"
@@ -13,18 +12,6 @@ const mockDispatch = jest.fn()
 
 beforeEach(() => {
   useDispatch.mockReturnValue(mockDispatch)
-})
-
-const initialState = {
-  todos: {
-    todoItems: [],
-    isAdding: false,
-  },
-}
-const mockStore = configureStore([])
-let store
-beforeEach(() => {
-  store = mockStore(initialState)
 })
 
 it("renders todo form with textare and buttons", () => {
