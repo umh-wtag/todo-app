@@ -15,3 +15,9 @@
   flex-wrap: wrap;
   gap: $sp-20;
 }
+
+.load{
+  display: flex;
+  justify-content: center;
+  margin-bottom: $sp-1;
+}

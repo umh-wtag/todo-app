@@ -21,3 +21,4 @@ export const IMAGE_PATHS = {
   ICON_SEARCH: search,
   BRAND_LOGO: vector,
 }
+export const MAX_TODOS = 9;
