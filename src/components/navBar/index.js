@@ -5,7 +5,7 @@ import "components/navBar/navBar.scss"
 function NavBar() {
   
   return (
-    <div className="navbar-container">
+    <div className="navbar-container" data-testid="navbar-container">
       <div className="navbar-container__logo">
         <img src={IMAGE_PATHS.BRAND_LOGO} alt={LOGO} />
         <h1>Todos</h1>
