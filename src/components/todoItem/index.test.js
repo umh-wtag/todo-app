@@ -18,7 +18,7 @@ it("renders the TodoItem component", () => {
   const todoTextElement = screen.getByText(`${mockTodo.text}`)
   expect(todoTextElement).toBeInTheDocument()
 
-  const createAt = screen.getByText((content, element) => {
+  const createAt = screen.getByText((content) => {
     return content.includes(`${mockTodo.createdAt}`)
   })
   expect(createAt).toBeInTheDocument()
