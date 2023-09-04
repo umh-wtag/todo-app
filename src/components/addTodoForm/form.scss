@@ -1,0 +1,36 @@
+@import "styles/_variables";
+@import "styles/colors";
+
+.todo-form {
+  &__container {
+    align-items: center;
+    background-color: $primary-white;
+    border: calc($sp-1 * 0.5) solid $primary-border;
+    display: flex;
+    flex-direction: column;
+    height: calc($sp-20 * 8);
+    position: relative;
+    width: calc($sp-36 * 8);
+
+    &__actions {
+      align-items: center;
+      bottom: $sp-12;
+      display: flex;
+      gap: $sp-4;
+      left: $sp-20;
+      position: absolute;
+
+      &--error{
+        font-size: calc($sp-2 * 7);
+      }
+    }
+
+    &__textarea {
+      border: $sp-2 solid $primary-border;
+      border-radius: $sp-8;
+      height: calc($sp-12 * 4);
+      margin-top: $sp-4;
+      width: calc($sp-36 * 6.8);
+    }
+  }
+}

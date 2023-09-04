@@ -1,0 +1,14 @@
+@import "src/styles/variables";
+@import "src/styles/colors";
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-24;
+  margin: 0 auto;
+  width: 80%;
+}
+
+body {
+  background-color: $primary-violet;
+}

@@ -1,0 +1,19 @@
+@import "styles/colors";
+@import "styles/variables";
+
+.navbar-container {
+  align-items: center;
+  border: $sp-1 solid $primary-border;
+  background-color: $primary-white;
+  display: flex;
+  justify-content: space-between;
+  padding-right: calc($sp-24 * 4);
+  padding-left: calc($sp-24 * 4);
+
+  &__logo {
+    align-items: center;
+    color: $primary-blue;
+    display: flex;
+    gap: $sp-4;
+  }
+}

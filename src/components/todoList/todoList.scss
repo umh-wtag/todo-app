@@ -1,0 +1,18 @@
+@import "styles/variables";
+
+.add {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.todoList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-20;
+  margin-bottom: $sp-36;
+}
