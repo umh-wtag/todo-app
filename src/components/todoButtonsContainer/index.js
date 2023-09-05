@@ -7,7 +7,9 @@ import {
   COMPLETE_BUTTON_ALT,
   DELETE_BUTTON_ALT,
   EDIT_BUTTON_ALT,
-  IMAGE_PATHS,
+  ICON_CHECK,
+  ICON_EDIT,
+  ICON_DELETE
 } from "utils/constants"
 import { calculateDate } from "utils/calculateDate"
 import "components/todoButtonsContainer/todoButtonsContainer.scss"
@@ -33,12 +35,12 @@ function TodoButtonsContainer({ todo, editing }) {
       {todo.completed === false && (
         <div className="item_card__actions--incomplete">
           <ImageButton
-            icon={IMAGE_PATHS.CHECK}
+            icon={ICON_CHECK}
             buttonAltText={COMPLETE_BUTTON_ALT}
             onClick={dispatchCompleted}
           />
           <ImageButton
-            icon={IMAGE_PATHS.EDIT}
+            icon={ICON_EDIT}
             buttonAltText={EDIT_BUTTON_ALT}
             onClick={dispatchEdit}
           />
@@ -46,7 +48,7 @@ function TodoButtonsContainer({ todo, editing }) {
       )}
       <div className="item_card__actions--completed">
         <ImageButton
-          icon={IMAGE_PATHS.DELETE}
+          icon={ICON_DELETE}
           buttonAltText={DELETE_BUTTON_ALT}
           onClick={dispatchDelete}
         />

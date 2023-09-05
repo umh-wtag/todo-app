@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux"
 import { addNewTodo, isAdding } from "redux/actions"
 import ImageButton from "components/buttons/imageButton"
 import { customSanitize } from "utils/sanitizeInput"
-import { DELETE_BUTTON_ALT, IMAGE_PATHS } from "utils/constants"
+import { DELETE_BUTTON_ALT, ICON_DELETE } from "utils/constants"
 import "components/addTodoForm/form.scss"
 
 function AddTodoForm() {
@@ -51,7 +51,7 @@ function AddTodoForm() {
       <div className="todo-form__container__actions">
         <button>Add Task</button>
         <ImageButton
-          icon={IMAGE_PATHS.DELETE}
+          icon={ICON_DELETE}
           buttonAltText={DELETE_BUTTON_ALT}
           onClick={() => dispatch(isAdding(false))}
         />

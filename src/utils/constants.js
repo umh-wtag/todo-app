@@ -13,11 +13,9 @@ export const LOGO = "Brand_logo"
 export const ADD_FIRST_TASK = "Add First Task"
 export const ADD_TODO_INPUT_PLACEHOLDER = 'ADD TODO'
 export const ADD_TODO_INPUT_NAME = "BODY"
-export const IMAGE_PATHS = {
-  EDIT: pencil,
-  DELETE: trash,
-  CHECK: done,
-  ADD: add,
-  ICON_SEARCH: search,
-  BRAND_LOGO: vector,
-}
+export const ICON_DELETE = trash
+export const ICON_EDIT = pencil
+export const ICON_CHECK = done
+export const ICON_ADD = add
+export const ICON_SEARCH = search
+export const BRAND_LOGO = vector
