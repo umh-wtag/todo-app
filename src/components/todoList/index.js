@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import { useSelector } from "react-redux"
 import TodoItem from "components/todoItem"
 import AddTodoForm from "components/addTodoForm"
-import { IMAGE_PATHS, ADD_FIRST_TASK } from "utils/constants"
+import { ICON_ADD, ADD_FIRST_TASK } from "utils/constants"
 import "components/todoList/todoList.scss"
 
 
@@ -11,25 +11,18 @@ const TodoList = () => {
   const todos = useSelector(selectTodos)
   const selectIsAdding = (state) => state.todos.isAdding
   const toggleIsAdding = useSelector(selectIsAdding)
-
-  const renderedListItems = todos
-    .slice(0)
-    .reverse()
-    .map((todo) => {
-      return <TodoItem key={todo.id} todo={todo} />
-    })
   
   return (
     <Fragment>
       {todos.length < 1 && toggleIsAdding === false && (
         <div className="add">
-          <img src={IMAGE_PATHS.ADD} alt={ADD_FIRST_TASK} />
+          <img src={ICON_ADD} alt={ADD_FIRST_TASK} />
           <h1>You didn't add any task. Please, add one.</h1>
         </div>
       )}
       <div className="todoList">
         {toggleIsAdding && <AddTodoForm />}
-        {renderedListItems}
+        {todos.map((item) =><TodoItem todo={ item } />)}
       </div>
     </Fragment>
   )

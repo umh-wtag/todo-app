@@ -1,17 +1,16 @@
 import React from "react"
-import { IMAGE_PATHS, SEARCH_ALT, LOGO } from "utils/constants"
+import { BRAND_LOGO, SEARCH_ALT, LOGO, ICON_SEARCH } from "utils/constants"
 import "components/navBar/navBar.scss"
 
 function NavBar() {
-  
   return (
     <div className="navbar-container">
       <div className="navbar-container__logo">
-        <img src={IMAGE_PATHS.BRAND_LOGO} alt={LOGO} />
+        <img src={BRAND_LOGO} alt={LOGO} />
         <h1>Todos</h1>
       </div>
       <div>
-        <img src={IMAGE_PATHS.ICON_SEARCH} alt={SEARCH_ALT} />
+        <img src={ICON_SEARCH} alt={SEARCH_ALT} />
       </div>
     </div>
   )

@@ -1,24 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
-import classnames from 'classnames'
-import TodoButtonsContainer from "components/todoButtonsContainer"
+import EditTodoForm from "components/editTodoForm"
+import ItemPreview from "components/itemPreview"
 import "components/todoItem/todoItem.scss"
+
 
 function TodoItem({ todo }) {
   
   return (
-    <div className="item_card">
-      <h2 className={classnames({'completed': todo.completed})}>
-        {todo.text}
-      </h2>
-      <div className="item_card__bottom">
-        <p className="item_card__time">
-          Created At : {todo.createdAt}
-        </p>
-        <TodoButtonsContainer todo={todo} />
-      </div>
+    <div className="todoList">
+      {
+        todo.editing ? (
+          <EditTodoForm key={todo.id} todo={todo} />
+        ) : (
+          <ItemPreview key={todo.id} todo={todo} editing={todo.editing} />
+        )
+      }
     </div>
   )
+
 }
 
 TodoItem.prototypes = {

@@ -1,0 +1,23 @@
+@import "styles/colors";
+@import "styles/variables";
+
+.item_card_preview {
+  background-color: $primary-white;
+  border: $sp-1 solid $primary-border;
+  height: calc($sp-24 * 5.1);
+  padding-left: $sp-12;
+  position: relative;
+  width: calc($sp-36 * 8);
+
+  &__bottom {
+    bottom: $sp-4;
+    position: absolute;
+    width: calc($sp-36 * 8);
+  }
+  
+  &__time {
+    color: $primary-gray;
+    font-size: $sp-12;
+    font-weight: 700;
+  }
+}
