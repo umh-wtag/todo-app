@@ -1,4 +1,4 @@
-import { ADD_TODO, IS_ADDING } from "redux/actions/actionTypes"
+import { ADD_TODO, IS_ADDING , DELETE_TODO } from "redux/actions/actionTypes"
 
 export const initialState = {
   todoItems: [],
@@ -18,7 +18,7 @@ export default function todosReducer(state = initialState, action) {
             id,
             text,
             createdAt,
-            completed,
+            completed
           },
         ].reverse(),
       }
@@ -28,6 +28,17 @@ export default function todosReducer(state = initialState, action) {
         ...state,
         isAdding,
       }
+
+    case DELETE_TODO:
+      const { deleteTodoId } = action.payload
+      const newTodoList = state.todoItems.filter(
+        (item) => item.id !== deleteTodoId
+      )
+      return {
+        ...state,
+        todoItems: newTodoList,
+      }
+    
     default:
       return state
   }
